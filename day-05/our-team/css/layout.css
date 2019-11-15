@@ -1,0 +1,28 @@
+.our-team-wrapper {
+  width: 100%;
+  background-color: #ececec;
+  background-image: url(../images/our-team-bar-repeat.png);
+  background-repeat: repeat-x;
+}
+
+.container {
+  max-width: calc(100vw - 171px);
+  margin: 0 auto;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 316px;
+}
+
+.abs-button {
+  width: 200px;
+  height: 50px;
+  background-image: url(../images/btn-background.png);
+}
+
+.abs-button p {
+  display: table;
+  vertical-align: middle;
+  text-align: center;
+}
