@@ -1,3 +1,109 @@
+.main-wrapper {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*******
+ --------header top---------
+******/
+
+.header-top {
+  background-color: #76c7c0;
+  background-image: url(../images/header-bar-repeat-image.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.header-content {
+  padding: 22px 0px 25px 0px;
+}
+
+/* header logo */
+
+.site-logo {
+  width: 102px;
+  float: left;
+  padding: 3px 0px 9px 10px;
+}
+
+/* header navbar */
+
+.navbar {
+  float: right;
+  font-size: 13px;
+  line-height: 34px;
+  margin-right: -21px;
+  position: relative;
+}
+
+/******** 
+------------header bottom-----------
+*********/
+.header-bottom {
+  background-color: #ececec;
+  position: relative;
+}
+
+.breadcrumb {
+  float: right;
+}
+
+/* footer css here */
+.footer-wrapper {
+  color: #fff;
+  clear: both;
+  position: relative;
+  margin-top: 2em;
+}
+
+.footer-top {
+  background: url(../images/footer-bar-repeat-image.png) repeat-x;
+  background-color: #76c7c0;
+}
+
+.footer-content {
+  padding: 48px 0px 45px 0px;
+}
+
+.content {
+  width: 30.76%;
+  float: left;
+  padding: 0px 0.42%;
+}
+
+.content-logo {
+  width: 102px;
+}
+
+.company {
+  width: 9.91%;
+  float: left;
+  padding: 0px 0.17%;
+  margin: 0px 2.56%;
+}
+
+.community {
+  width: 9.91%;
+  float: left;
+  padding: 0px 0.17%;
+  margin: 0px 4.27%;
+}
+
+.from-blog {
+  width: 29.05%;
+  float: left;
+  padding: 0px 2.56%;
+}
+
+.from-blog-logo {
+  width: 136px;
+}
+
 .blog-post {
   padding: 10px 0px;
 }

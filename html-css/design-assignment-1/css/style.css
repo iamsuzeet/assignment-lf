@@ -19,13 +19,14 @@
 
 .navbar ul li {
   padding: 0px 28px;
+  margin: 0px 2px;
+  /* width: 66px; */
 }
 
 .navbar ul li:hover {
   background: url(../images/active.png) no-repeat;
-  width: 66px;
+  /* width: 66px;  image moves if used */
   text-align: center;
-  /* margin: 0px 2px; */
 }
 
 .navbar ul li:last-of-type {
@@ -88,7 +89,12 @@
 }
 
 .breadcrumb ul li {
+  color: #7f8c8c;
   padding: 0px 9px;
+}
+
+.breadcrumb ul li a {
+  color: #7f8c8c;
 }
 
 .breadcrumb ul li:last-of-type {
@@ -115,9 +121,10 @@
 }
 
 /* header traingle shape */
+
 .header-bottom-shape {
-  width: 23px;
-  height: 12px;
+  bottom: -15px;
+
   position: absolute;
 }
 
@@ -131,7 +138,7 @@
 
 .contact-label {
   font-size: 13px;
-  line-height: 1.8;
+
   text-align: left;
 }
 
@@ -248,4 +255,11 @@
 
 .company ul {
   list-style: none;
+}
+
+.contact-label .contact-info {
+  font-weight: 400;
+  font-size: 20px;
+  padding-left: 5px;
+  font-style: italic;
 }
