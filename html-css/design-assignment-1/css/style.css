@@ -20,12 +20,12 @@
 .navbar ul li {
   padding: 0px 28px;
   margin: 0px 2px;
-  /* width: 66px; */
 }
 
 .navbar ul li:hover {
-  background: url(../images/active.png) no-repeat;
-  /* width: 66px;  image moves if used */
+  background-image: url(../images/active.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   text-align: center;
 }
 
@@ -126,6 +126,168 @@
   bottom: -15px;
 
   position: absolute;
+}
+
+/* body part with info  */
+.top-info-title {
+  padding: 0 0 21px 10px;
+  font-size: 30px;
+  color: #e1524b;
+}
+
+.top-info-desc {
+  font-size: 14px;
+  line-height: 20.8px;
+  padding-left: 5px;
+}
+
+/* body description */
+.left-info-desc li {
+  font-size: 13px;
+  line-height: 26px;
+}
+
+.left-info-desc li:before {
+  content: url("../images/right-arrow.png");
+  color: #e1524b;
+  padding-right: 6px;
+}
+
+.secondary-color a {
+  color: #e1524b;
+}
+
+.client-say {
+  padding: 0px 10px;
+  font-size: 13px;
+  line-height: 19.2px;
+}
+
+.client-say h4 {
+  font-size: 16px;
+}
+
+.slide-triangle {
+  position: absolute;
+  left: 22px;
+}
+.client-name {
+  position: absolute;
+  left: 60px;
+  bottom: -30px;
+}
+
+.our_team .btn_team {
+  background: url("../images/non-hover-button.png") no-repeat;
+
+  width: 200px;
+  height: 54px;
+  position: relative;
+  padding: 17px 14px;
+  display: block;
+  line-height: 1.2;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  margin: -28px 35px 0 50px;
+}
+
+.our_team .btn_team .btn_team-text {
+  color: #fff;
+  padding-right: 25px;
+}
+
+.our_team .btn_team:hover {
+  background: url("../images/hover-red-button.png") no-repeat;
+  width: 200px;
+  color: #fff;
+}
+
+.our_team .wrap_person p {
+  text-align: left;
+  color: #fff;
+  padding-bottom: 60px;
+  font-size: 14px;
+}
+
+.our_team .wrap_person ul li {
+  display: inline-block;
+  background-color: #6ab3ac;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.our_team .wrap_person ul li img {
+  margin-top: 6px;
+}
+
+/* services and jquery logo */
+.bt_services_content h3 {
+  font-weight: 300;
+  color: #e1524b;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.bt_services_content p {
+  color: #7f8c8c;
+  font-weight: 300;
+}
+
+.bt_services_content span {
+  color: #7f8c8c;
+  font-weight: 400;
+}
+
+/* happy clients */
+.title_with_line .title_line {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  font-weight: 800;
+  color: #7f8c8c;
+  font-size: 16px;
+}
+
+.title_with_line:after {
+  content: url("../images/hr-line.png");
+  vertical-align: middle;
+}
+
+.title_with_line img.left {
+  margin: 0px 4px;
+}
+
+.arrow-left,
+.arrow-right {
+  float: left;
+  background-image: url("../images/happy-client-background-light.png");
+  background-size: 100% 100%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  background-repeat: no-repeat;
+  padding: 10px 15px 10px 12px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  float: left;
+  margin-left: 20px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background-image: url("../images/happy-client-background-red.png");
+}
+
+.jquery-carousel img {
+  margin-right: 30px;
+}
+
+.jquery-carousel img:last-of-type {
+  margin-right: 0;
 }
 
 /* footer styling */
