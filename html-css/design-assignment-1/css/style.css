@@ -157,6 +157,11 @@
   color: #e1524b;
 }
 
+.middle-info ul li span.bar-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
 .client-say {
   padding: 0px 10px;
   font-size: 13px;
