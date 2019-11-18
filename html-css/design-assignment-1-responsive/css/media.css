@@ -1,0 +1,376 @@
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .navbar {
+    margin-right: 0;
+  }
+
+  .left-info {
+    width: 30%;
+  }
+
+  .middle-info {
+    width: 60%;
+    margin-left: 10px;
+  }
+
+  .right-info {
+    float: left;
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+
+  .client-say h4 {
+    text-align: center;
+  }
+
+  .our_team .wrap_person ul li {
+    margin-right: 0px;
+  }
+
+  .jquery-carousel ul li {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .our_team .wrap_person p {
+    padding-bottom: 20px;
+  }
+
+  .our_team .wrap_person ul li {
+    width: 38px;
+  }
+
+  .our_team .btn_team {
+    margin: -28px 35px 0 35px;
+  }
+
+  .jquery-carousel ul li {
+    margin-right: 20px;
+  }
+
+  .jquery-carousel ul li:last-of-type {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-logo {
+    margin-left: 39%;
+    padding: 0px 0px 20px 10px;
+  }
+
+  .navbar ul li {
+    padding: 0px 20px;
+  }
+
+  .navbar ul li:last-of-type {
+    margin-top: 10px;
+    margin-left: 44%;
+  }
+
+  .left-info {
+    width: 28%;
+  }
+
+  .left-info-desc {
+    margin-top: 60px;
+  }
+
+  .middle-info {
+    margin-left: 80px;
+  }
+
+  .middle-info ul li.logo {
+    margin: 10px 32px;
+  }
+
+  .right-info {
+    margin-left: 35%;
+  }
+
+  .col-md-3 {
+    width: 50%;
+  }
+
+  .our_team .wrap_person .person_inner_wrap {
+    left: 50px;
+    padding: 35px 40px 0px 35px;
+  }
+
+  .our_team .wrap_person ul {
+    margin-right: 40px;
+  }
+
+  .our_team .wrap_person ul li {
+    margin-right: 8px;
+  }
+
+  .our_team .btn_team {
+    margin: -28px 35px 0 90px;
+  }
+
+  .title_with_line:after {
+    content: "";
+  }
+
+  .jquery-carousel ul li {
+    margin-right: 8.9%;
+  }
+
+  .jquery-carousel ul li:nth-child(even) {
+    display: none;
+  }
+
+  .content {
+    width: 44%;
+  }
+
+  .company {
+    width: 40%;
+    margin-left: 10%;
+  }
+
+  .company ul {
+    padding: 30px;
+  }
+
+  .community {
+    width: 33%;
+    float: right;
+    padding: 0 8.17%;
+    margin: 4%;
+  }
+
+  .community ul {
+    padding: 30px;
+  }
+
+  .from-blog {
+    padding: 0 0.56%;
+    margin: 4% 0;
+  }
+
+  .blog-status {
+    width: 61.53%;
+  }
+
+  .jquery-carousel {
+    padding: 50px 10px;
+  }
+
+  .footer-content {
+    padding: 48px -1px 45px 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .current-page {
+    font-size: 18px;
+  }
+
+  .top-info {
+    margin: 0;
+  }
+  .container {
+    max-width: 80%;
+  }
+  .site-logo {
+    margin-left: 0;
+    padding: 3px 0px 9px 10px;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .burger-menu {
+    float: right;
+  }
+
+  .burger-menu:hover + .navbar {
+    display: block;
+  }
+
+  .navbar ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 -18px;
+  }
+
+  .navbar ul li.active {
+    width: 100%;
+    background-size: 100% 100%;
+  }
+
+  .navbar ul li.active a {
+    display: inline;
+    float: none;
+  }
+
+  .navbar ul li span {
+    float: none;
+  }
+
+  .navbar ul li:last-of-type {
+    margin-left: -15px;
+  }
+
+  .top-info-desc {
+    font-size: 16px;
+  }
+
+  .left-info {
+    margin-left: 22%;
+    text-align: center;
+    width: 50%;
+  }
+
+  .left-info h4 {
+    font-weight: 800;
+    font-size: 15px;
+  }
+
+  .left-info-desc {
+    margin-top: 5%;
+    margin-left: -10%;
+    font-size: 30px;
+  }
+
+  .left-info-desc ul li {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .middle-info {
+    float: none;
+    display: none;
+  }
+
+  .right-info {
+    margin-top: 15%;
+    margin-left: 2%;
+    width: 100%;
+  }
+
+  .client-say h4 {
+    font-weight: 800;
+    font-size: 15px;
+  }
+
+  .client-name {
+    left: 60px;
+    bottom: -45px;
+  }
+
+  .col-md-3 {
+    width: 100%;
+  }
+
+  .middle-grey-box h2 {
+    font-size: 30px;
+    padding-top: 50px;
+  }
+
+  .our_team .wrap_person ul {
+    margin-right: 0;
+  }
+
+  .our_team .wrap_person ul li {
+    margin-right: 4px;
+  }
+
+  .our_team .btn_team {
+    margin: -28px 35px 0 57px;
+  }
+
+  .our_team .wrap_person p {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .our_team .wrap_person .person_inner_wrap {
+    left: 25px;
+  }
+
+  .bt_services_content {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .bt_services_content h3 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .bt_services_content p {
+    font-size: 14px;
+  }
+
+  .title-arrow {
+    width: 100%;
+  }
+
+  .title_with_line:after {
+    content: "";
+  }
+  .arrow {
+    margin-top: -15px;
+  }
+
+  .jquery-carousel {
+    padding: 50px 0;
+  }
+
+  .jquery-carousel ul li {
+    display: none;
+  }
+
+  .jquery-carousel ul li:first-child {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .company {
+    display: none;
+  }
+
+  .community {
+    display: none;
+  }
+
+  .from-blog {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: -15%;
+  }
+
+  .blog-status {
+    width: 73.53%;
+  }
+}
