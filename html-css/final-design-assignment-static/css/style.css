@@ -1,7 +1,240 @@
-.landing h1 {
-  font-size: 50px;
+/* default background color */
+.bg-gray,
+.slider {
+  background-color: #efefef;
 }
 
-.landing p {
-  font-size: 20px;
+.bg-light-gray {
+  background-color: #f5f5f5;
+}
+
+.bg-chocolate {
+  background-color: #1c1206;
+}
+
+.bg-light-chocolate {
+  background-color: #29231d;
+}
+
+.bg-light-dark {
+  background-color: #323232;
+}
+
+.bg-yellow {
+  background-color: #f9bf12;
+}
+
+.bg-post-hover-yellow,
+.bg-col-hover-yellow {
+  background-color: #f9c428;
+}
+
+/* default text color */
+
+.bg-post-color {
+  color: #fbcd41;
+}
+
+/* //check each h2 section color for this  */
+.dark-color {
+  color: #1c1105;
+}
+
+.light-dark-color {
+  color: #323232;
+}
+
+.gray-color {
+  color: #efefef;
+}
+
+.light-gray-color {
+  color: #c4c4bf;
+}
+
+.white-color {
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.active.nav-active-color a,
+.navbar-links li:hover a,
+.price-color {
+  color: #fac012;
+}
+
+/* header default styling */
+h1.big {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+h2,
+p.h2-light {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h2.bold {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.h3-bold {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+p.h3-light {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.h4-regular {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h5,
+p.h5-bold {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+p.h5-light {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+h6,
+span.h6-bold {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.small.text-white {
+  color: #fff;
+}
+
+.footer-text-color {
+  color: #52473b;
+}
+
+/* header (h1-h6) end here */
+
+/* some button styling start */
+
+.btn-text {
+  color: #fff;
+  line-height: 43px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.btn-text-form {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 43px;
+  text-align: center;
+}
+
+.btn-tags {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* button styling end */
+
+/* hr line */
+.hr-line {
+  max-width: 66px;
+  margin: 0 auto;
+  margin-top: 24px;
+  height: 3px;
+}
+
+.hr-line-why {
+  max-width: 66px;
+  margin-top: 24px;
+  height: 3px;
+}
+
+.hr-line-footer {
+  max-width: 66px;
+  margin-top: 13px;
+  margin-bottom: 30px;
+  height: 3px;
+}
+
+/* hr line end */
+
+/* header part start here */
+.cart-item-count {
+  font-size: 35px;
+}
+
+.cart-item-title {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* header part end here */
+
+/* navbar part start here */
+
+.navbar-wrapper ul li {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.navbar-wrapper ul li.active:after {
+  content: url("../images/navbar-active-icon.png");
+  padding-left: 8px;
+}
+
+/* navbar end here */
+
+/* latest post start here */
+.latest-posts-description li span {
+  font-size: 14px;
+  font-weight: 400;
+}
+/* latest post end here */
+
+/* scroll up style */
+#scrollUp {
+  background-image: url("../images/go-to-up-arrow.png");
+  bottom: 20px;
+
+  font-size: 22px;
+  height: 48px;
+
+  position: absolute;
+  bottom: 50px;
+  right: 200px;
+  text-align: center;
+  width: 48px;
 }
