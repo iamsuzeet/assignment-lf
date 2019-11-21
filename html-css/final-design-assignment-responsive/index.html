@@ -4,21 +4,972 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YOUNIVERSE | HOME</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <script src="html5shiv.min.js"></script>
   </head>
   <body>
-    <section class="landing">
-      <div class="landing-inner">
-        <img src="images/logo.png" alt="logo" />
-        <p>Working on it</p>
-        <h1>Coming Soon</h1>
-        <div class="countdown"></div>
+    <!-- header logo and featured product starts here -->
+
+    <header id="top" class="header-wrapper bg-gray">
+      <div class="header-top-content">
+        <div class="header-logo clearfix">
+          <a href="#">
+            <img src="images/site-logo.png" alt="site logo" />
+          </a>
+        </div>
+
+        <div class="header-nav clearfix">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="images/search-icon.png" alt="search icon"
+              /></a>
+            </li>
+            <li class="cart-li">
+              <a href="#"
+                ><img src="images/cart-icon.png" alt="cart icon" />
+                <span class="cart-item-count dark-color">00</span>
+                <span class="cart-item-title dark-color">ITEMS</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/hamburger-icon.png" alt="hamburger-icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="featured-wrapper">
+        <a href="#" class="slider featured-left-slider"></a>
+
+        <a href="#" class="slider featured-right-slider"></a>
+
+        <div class="featured-products">
+          <div class="featured-products-top clearfix">
+            <div class="featured-products-title">
+              <h1 class="color-dark">Featured Products</h1>
+            </div>
+
+            <div class="featured-products-button">
+              <div class="button-relative">
+                <button class="bg-chocolate">
+                  <a class="btn-text" href="#"
+                    ><span class="gray-color">More</span> Details</a
+                  >
+                </button>
+
+                <a class="button-absolute" href="#"
+                  ><img src="images/button-absolute.png" alt="btn-abs"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-products-bottom clearfix">
+            <div class="products-title">
+              <div class="products-icon">
+                <img src="images/sofa-icon.png" alt="sofa icon" />
+              </div>
+              <div class="products-details">
+                <h3>Davis Furniture</h3>
+                <p class="light-dark-color">Leather Collection 2015</p>
+              </div>
+            </div>
+
+            <div class="products-price">
+              <div class="products-icon">
+                <img src="images/price-tag-icon.png" alt="sofa icon" />
+              </div>
+              <div class="products-details">
+                <h3>Starting Price:</h3>
+                <p class="light-dark-color">$399.00</p>
+              </div>
+            </div>
+
+            <div class="products-color-alter">
+              <div class="products-icon">
+                <img src="images/color-alter-icon.png" alt="sofa icon" />
+              </div>
+              <div class="products-details">
+                <h3>Color Alternatives:</h3>
+                <p class="light-dark-color">Brown, Black, White</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- header part end here -->
+
+    <!-- navbar start here -->
+    <nav class="navbar-wrapper bg-chocolate">
+      <div class="container-navbar">
+        <ul class="navbar-links">
+          <li class="active nav-active-color">
+            <a href="#">home </a>
+          </li>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our team</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">our blog</a></li>
+          <li><a href="#">our products</a></li>
+          <li><a href="#">latest collections</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar end here -->
+
+    <!-- product slider part start here -->
+    <section class="products-collection-wrapper container clearfix">
+      <div class="products-items">
+        <h4 class="dark-color">SOFAS</h4>
+        <div class="products-collection-button">
+          <div class="button-relative">
+            <button class="bg-chocolate">
+              <a class="btn-text" href="#"
+                ><span class="gray-color">More</span> Details</a
+              >
+            </button>
+
+            <a class="button-absolute" href="#"
+              ><img src="images/button-absolute.png" alt="btn-abs"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-items">
+        <h4 class="dark-color">ARMCHAIRS</h4>
+        <div class="products-collection-button">
+          <div class="button-relative">
+            <button class="bg-chocolate">
+              <a class="btn-text" href="#"
+                ><span class="gray-color">More</span> Details</a
+              >
+            </button>
+
+            <a class="button-absolute" href="#"
+              ><img src="images/button-absolute.png" alt="btn-abs"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-items">
+        <h4 class="dark-color">SINGLE BEDS</h4>
+        <div class="products-collection-button">
+          <div class="button-relative">
+            <button class="bg-chocolate">
+              <a class="btn-text" href="#"
+                ><span class="gray-color">More</span> Details</a
+              >
+            </button>
+
+            <a class="button-absolute" href="#"
+              ><img src="images/button-absolute.png" alt="btn-abs"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-slider clearfix text-center">
+        <div class="products-slider-arrow">
+          <a href="#left" class="products-slider-left"> </a>
+
+          <a href="#right" class="products-slider-right"></a>
+        </div>
       </div>
     </section>
 
-    <script src="main.js"></script>
+    <!-- product slider part end here -->
+
+    <!-- latest furniture part start here -->
+
+    <section class="latest-furniture-wrapper container clearfix">
+      <h2 class="text-center">LATEST FURNITURE</h2>
+      <div class="hr-line bg-gray"></div>
+
+      <div class="card-wrapper clearfix">
+        <div class="latest-furniture-items">
+          <div class="card-furniture-items">
+            <a href="#card" class="card-label-description">
+              <div class="card-label promo bg-chocolate">
+                <p class="">PROMO</p>
+              </div>
+
+              <div class="card-description">
+                <h5 class="text-center dark-color">DEVON'S COLLECTION</h5>
+                <p class="light-dark-color">
+                  Lorem ipsum dolor sit amet hoho !! consectetur haha
+                  adipisicing elit.
+                </p>
+
+                <h3 class="price text-center price-color">$459.99</h3>
+              </div>
+
+              <a href="#" class="card-add-to-cart bg-yellow text-center">
+                <img src="images/add-to-cart-icon.png" alt="cart icon" />ADD TO
+                CART
+              </a>
+            </a>
+          </div>
+        </div>
+
+        <div class="latest-furniture-items">
+          <div class="card-furniture-items">
+            <a href="#card" class="card-label-description">
+              <div class="card-label">
+                <p>replace</p>
+              </div>
+
+              <div class="card-description">
+                <h5 class="text-center dark-color">90' OLD FURNITURE</h5>
+                <p class="light-dark-color">
+                  Lorem ipsum dolor sit amet hoho !! consectetur haha
+                  adipisicing elit.
+                </p>
+
+                <h3 class="price text-center price-color">$899.00</h3>
+              </div>
+
+              <a href="#" class="card-add-to-cart bg-yellow text-center">
+                <img src="images/add-to-cart-icon.png" alt="cart icon" />ADD TO
+                CART
+              </a>
+            </a>
+          </div>
+        </div>
+
+        <div class="latest-furniture-items">
+          <div class="card-furniture-items">
+            <a href="#card" class="card-label-description">
+              <div class="card-label new bg-yellow ">
+                <p class="">NEW</p>
+              </div>
+
+              <div class="card-description">
+                <h5 class="text-center dark-color">GET READY COLLECTION</h5>
+                <p class="light-dark-color">
+                  Lorem ipsum dolor sit amet hoho !! consectetur haha
+                  adipisicing elit.
+                </p>
+
+                <h3 class="price text-center price-color">$250.00</h3>
+              </div>
+
+              <a href="#" class="card-add-to-cart bg-yellow text-center">
+                <img src="images/add-to-cart-icon.png" alt="cart icon" />ADD TO
+                CART
+              </a>
+            </a>
+          </div>
+        </div>
+
+        <div class="latest-furniture-items">
+          <div class="card-furniture-items">
+            <a href="#card" class="card-label-description">
+              <div class="card-label">
+                <p>replace</p>
+              </div>
+
+              <div class="card-description">
+                <h5 class="text-center dark-color">JUST WHITE COLLECTION</h5>
+                <p class="light-dark-color">
+                  Lorem ipsum dolor sit amet hoho !! consectetur haha
+                  adipisicing elit.
+                </p>
+
+                <h3 class="price text-center price-color">$262.00</h3>
+              </div>
+            </a>
+
+            <a
+              href="#add-to-cart"
+              class="card-add-to-cart bg-yellow text-center"
+            >
+              <img src="images/add-to-cart-icon.png" alt="cart icon" />ADD TO
+              CART
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- latest furniture part end here -->
+
+    <!-- why choose wrapper start -->
+    <section class="why-choose-wrapper bg-chocolate">
+      <div class="container clearfix">
+        <div class="why-choose-content-left"></div>
+        <div class="why-choose-content-right">
+          <h2 class="white-color">
+            WHY CHOOSE YOUNIVERSE?
+          </h2>
+          <div class="hr-line-why bg-yellow"></div>
+
+          <div class="why-choose-description">
+            <p class="gray-color">
+              The reason most people donot recognize an opportunity when they
+              meet it is because Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Nisi aspernatur laudantium.
+            </p>
+
+            <div class="accordion-wrapper">
+              <div class="title-desc">
+                <div class="accordion-title gray-color">
+                  <h5>AWESOME WORK</h5>
+                  <div class="accordion-status"></div>
+                </div>
+
+                <div class="accordion-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ullam, officiis? Praesentium, ullam dolorem illum aliquam
+                    provident porro eius adipisci suscipit! Lorem ipsum dolor
+                    sit amet.
+                  </p>
+                </div>
+              </div>
+
+              <div class="title-desc">
+                <div class="accordion-title gray-color">
+                  <h5>NICE & CREATIVE DESIGN</h5>
+                  <div class="accordion-status"></div>
+                </div>
+                <div class="accordion-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ullam, officiis? Praesentium, ullam dolorem illum aliquam
+                    provident porro eius adipisci suscipit! Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. In, odio.
+                  </p>
+                </div>
+              </div>
+
+              <div class="title-desc">
+                <div class="accordion-title gray-color">
+                  <h5>PLENTY OF PAGES</h5>
+                  <div class="accordion-status"></div>
+                </div>
+
+                <div class="accordion-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ullam, officiis? Praesentium, ullam dolorem illum aliquam
+                    provident porro eius adipisci suscipit!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why choose wrapper end -->
+
+    <!-- latest post section start -->
+    <section class="latest-posts-wrapper container clearfix">
+      <div class="latest-posts-content">
+        <h2 class="text-center">
+          LATEST POSTS
+        </h2>
+        <div class="hr-line bg-gray"></div>
+
+        <div class="latest-posts clearfix">
+          <div class="latest-posts-items clearfix">
+            <div class="latest-posts-image"></div>
+
+            <div class="latest-posts-details">
+              <div class="latest-posts-date">
+                <h2 class="dark-color">19</h2>
+                <h6 class="dark-color">SEP</h6>
+              </div>
+
+              <div class="latest-posts-description">
+                <h3 class="dark-color">OUTDOOR FURNITURE</h3>
+                <ul>
+                  <li>
+                    <span class="light-gray-color"
+                      >by <a href="#" class="bg-post-color"> Sujit123</a></span
+                    >
+                  </li>
+                  <li>
+                    <span class="light-gray-color"
+                      >in <a href="#" class="bg-post-color"> Outdoor</a></span
+                    >
+                  </li>
+                  <li><a href="#" class="bg-post-color">4 comments</a></li>
+                </ul>
+                <p class="light-gray-color">
+                  Lorem, ipsum Lorem ipsum dolor sit amet consectetu.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="latest-posts-items clearfix">
+            <div class="latest-posts-image"></div>
+
+            <div class="latest-posts-details">
+              <div class="latest-posts-date">
+                <h2 class="dark-color">18</h2>
+                <h6 class="dark-color">SEP</h6>
+              </div>
+
+              <div class="latest-posts-description">
+                <h3 class="dark-color">GIOCONDA COLLECTION</h3>
+                <ul>
+                  <li>
+                    <span class="light-gray-color"
+                      >by <a href="#" class="bg-post-color"> Saggy123</a></span
+                    >
+                  </li>
+                  <li>
+                    <span class="light-gray-color"
+                      >in <a href="#" class="bg-post-color"> Outdoor</a></span
+                    >
+                  </li>
+                  <li><a href="#" class="bg-post-color">0 comments</a></li>
+                </ul>
+                <p class="light-gray-color">
+                  Lorem, ipsum Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit..
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="latest-posts-items clearfix">
+            <div class="latest-posts-image"></div>
+
+            <div class="latest-posts-details">
+              <div class="latest-posts-date">
+                <h2 class="dark-color">17</h2>
+                <h6 class="dark-color">SEP</h6>
+              </div>
+
+              <div class="latest-posts-description">
+                <h3 class="dark-color">WHITEY COLLECTION</h3>
+                <ul>
+                  <li>
+                    <span class="light-gray-color"
+                      >by <a href="#" class="bg-post-color"> rohanB12</a></span
+                    >
+                  </li>
+                  <li>
+                    <span class="light-gray-color"
+                      >in <a href="#" class="bg-post-color"> Outdoor</a></span
+                    >
+                  </li>
+                  <li><a href="#" class="bg-post-color">10 comments</a></li>
+                </ul>
+                <p class="light-gray-color">
+                  Lorem, ipsum Lorem ipsum dolor sit amet consectetur
+                  adipisicing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- latest post section end -->
+
+    <!-- get discount section start -->
+    <section class="get-discount-wrapper">
+      <div class="container">
+        <div class="get-discount-content-left"></div>
+        <div class="get-discount-content-right">
+          <h2 class="white-color">
+            GET OUR DISCOUNTS
+          </h2>
+          <div class="hr-line-why bg-gray"></div>
+
+          <div class="get-discount-form">
+            <p class="gray-color">
+              He who would learn to fly one day must first learn to stand and
+              walk and run and climb and dance;one cannot fly into flying.
+            </p>
+
+            <form action="index.html" class="input-discounts clearfix">
+              <div class="input-your-name">
+                <input type="text" name="name" placeholder="YOUR NAME" />
+              </div>
+
+              <div class="input-your-email">
+                <input type="text" name="email" placeholder="YOUR E-MAIL" />
+              </div>
+
+              <div class="input-form-button">
+                <div class="button-relative">
+                  <button type="submit" class="bg-gray">
+                    <a class="btn-text-form" href="#"
+                      ><span class="dark-color">SUBSCRIBE</span></a
+                    >
+                  </button>
+
+                  <a class="button-absolute" href="#"
+                    ><img src="images/button-absolute.png" alt="btn-abs"
+                  /></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- get discount section end -->
+
+    <!-- newest collections start -->
+
+    <section class="newest-collections-wrapper container clearfix">
+      <div class="collection-content">
+        <h2 class="text-center">
+          GET OUR DISCOUNTS
+        </h2>
+        <div class="hr-line bg-gray"></div>
+
+        <div class="collection-tags">
+          <ul>
+            <li class="active"><a href="#">ALL</a></li>
+            <li><a href="#">CRAIGSON</a></li>
+            <li><a href="#">FILLY'S CO.</a></li>
+            <li><a href="#">SAYONARA</a></li>
+            <li><a href="#">JAMESON</a></li>
+          </ul>
+        </div>
+
+        <div class="collection-posts clearfix">
+          <a href="#" class="collection-posts-items">
+            <div class="collection-posts-image">
+              <div class="collection-posts-desc text-center">
+                <h5>DONATELLA COLLECTION</h5>
+                <h2 class="bold">$598.00</h2>
+                <p class="h5-bold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="collection-posts-items">
+            <div class="collection-posts-image">
+              <div class="collection-posts-desc text-center">
+                <h5>DONATELLA COLLECTION</h5>
+                <h2 class="bold">$598.00</h2>
+                <p class="h5-bold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="collection-posts-items">
+            <div class="collection-posts-image">
+              <div class="collection-posts-desc text-center">
+                <h5>DONATELLA COLLECTION</h5>
+                <h2 class="bold">$598.00</h2>
+                <p class="h5-bold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="collection-posts-items">
+            <div class="collection-posts-image">
+              <div class="collection-posts-desc text-center">
+                <h5>DONATELLA COLLECTION</h5>
+                <h2 class="bold">$598.00</h2>
+                <p class="h5-bold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="collection-posts-items">
+            <div class="collection-posts-image">
+              <div class="collection-posts-desc text-center">
+                <h5>DONATELLA COLLECTION</h5>
+                <h2 class="bold">$598.00</h2>
+                <p class="h5-bold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="collection-posts-items">
+            <div class="collection-posts-image">
+              <div class="collection-posts-desc text-center">
+                <h5>DONATELLA COLLECTION</h5>
+                <h2 class="bold">$598.00</h2>
+                <p class="h5-bold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- newest collections end -->
+
+    <!-- contact us sections start -->
+    <section class="contact-us-wrapper bg-light-gray clearfix">
+      <div class="container">
+        <div class="contact-wrapper clearfix">
+          <div class="contact-left">
+            <div class="contact-title">
+              <h1 class="big">CONTACT</h1>
+              <p class="h3-light dark-color">Get in touch with us</p>
+            </div>
+            <div class="contact-address">
+              <h5>OUR ADDRESS</h5>
+              <p class="h5-light dark-color">251 Washington Avenue</p>
+              <p class="h5-light dark-color">Jackson, MS 39208</p>
+            </div>
+            <div class="contact-phone-no">
+              <h5>OUR PHONE NUMBERS</h5>
+              <p class="h5-light dark-color">601-933-2116</p>
+              <p class="h5-light dark-color">601-933-2875</p>
+            </div>
+
+            <div class="contact-email-us">
+              <h5>EMAIL US</h5>
+              <p class="h5-light dark-color">601-933-2116</p>
+              <p class="h5-light dark-color">601-933-2875</p>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form action="index.html" class="input-contact">
+              <div class="contact-name">
+                <input type="text" name="name" placeholder="Name" />
+              </div>
+              <div class="contact-email">
+                <input type="email" name="email" placeholder="E-mail" />
+              </div>
+              <div class="contact-subject">
+                <input type="text" name="subject" placeholder="Subject" />
+              </div>
+
+              <div class="contact-textarea">
+                <textarea
+                  name="textarea"
+                  rows="15"
+                  placeholder="How Can We help?"
+                ></textarea>
+              </div>
+
+              <div class="input-form-button">
+                <div class="button-relative">
+                  <button type="submit" class="bg-chocolate">
+                    <a class="btn-text-form" href="#"
+                      ><span class="gray-color">Send</span> Now</a
+                    >
+                  </button>
+
+                  <a class="button-absolute" href="#"
+                    ><img src="images/button-absolute.png" alt="btn-abs"
+                  /></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact us sections end -->
+
+    <!-- footer start -->
+    <footer class="footer-wrapper bg-chocolate clearfix">
+      <div class="container">
+        <div class="footer-content">
+          <div class="social-links-about">
+            <div class="footer-about">
+              <p class="h5-light footer-text-color">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Consequuntur, voluptate distinctio obcaecati.
+              </p>
+              <p class="h5-light second footer-text-color">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+
+              <p class="second relative footer-text-color">
+                <img src="images/footer-right-arrow.png" alt="right" />
+                <a class="link-absolute" href="#"
+                  ><span class="h6-bold bg-post-color">READ MORE</span>
+                </a>
+              </p>
+            </div>
+
+            <div class="footer-social-links">
+              <p class="social-links link-items">
+                <img src="images/fb.png" alt="fb" />
+                <a class="social-link-relative" href="#"
+                  ><span class="link-hover footer-text-color">Find Us</span>
+                  <br />
+                  <span class="link-hover footer-text-color">On Facebook</span>
+                </a>
+              </p>
+
+              <p class="social-links link-items">
+                <img src="images/twitter.png" alt="fb" />
+                <a class="social-link-relative" href="#"
+                  ><span class="link-hover footer-text-color">Follow Us</span>
+                  <br />
+                  <span class="link-hover footer-text-color">On Twitter</span>
+                </a>
+              </p>
+
+              <p class="social-links link-items">
+                <img src="images/rss.png" alt="fb" />
+                <a class="social-link-relative" href="#"
+                  ><span class="link-hover footer-text-color">Subscribe</span>
+                  <br />
+                  <span class="link-hover footer-text-color">To RSS</span>
+                </a>
+              </p>
+
+              <p class="social-links link-items">
+                <img src="images/gplus.png" alt="fb" />
+                <a class="social-link-relative" href="#"
+                  ><span class="link-hover footer-text-color">Find Us</span>
+                  <br />
+                  <span class="link-hover footer-text-color">On Google +</span>
+                </a>
+              </p>
+
+              <p class="social-links link-items">
+                <img src="images/dribble.png" alt="fb" />
+                <a class="social-link-relative" href="#"
+                  ><span class="link-hover footer-text-color">Follow Us</span>
+                  <br />
+                  <span class="link-hover footer-text-color">On Dribble</span>
+                </a>
+              </p>
+
+              <p class="social-links link-items">
+                <img src="images/pininterest.png" alt="fb" />
+                <a class="social-link-relative" href="#"
+                  ><span class="link-hover footer-text-color">Follow Us</span>
+                  <br />
+                  <span class="link-hover footer-text-color">On Pinterest</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="footer-latest-products clearfix">
+            <h5 class="white-color">LATEST PRODUCTS</h5>
+            <div class="hr-line-footer bg-yellow"></div>
+
+            <a href="#" class="products-latest-item clearfix">
+              <div class="footer-latest-non-hover"></div>
+              <div class="footer-latest-desc">
+                <h4 class="h4-regular footer-text-color">Jameson Armchair</h4>
+                <div class="img-star">
+                  <img src="images/4-star.png" alt="star" />
+                </div>
+
+                <div class="footer-latest-price">
+                  <span class="price-linethrough footer-text-color">
+                    $124.00
+                  </span>
+                  <span class="h3-bold bg-post-color">$109.99</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="products-latest-item clearfix">
+              <div class="footer-latest-non-hover"></div>
+              <div class="footer-latest-desc">
+                <h4 class="h4-regular footer-text-color">Leather Sofa</h4>
+                <div class="img-star">
+                  <img src="images/3star.png" alt="star" />
+                </div>
+
+                <div class="footer-latest-price">
+                  <span class="price-linethrough footer-text-color">
+                    $274.00
+                  </span>
+                  <span class="h3-bold bg-post-color">$250.99</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="products-latest-item clearfix">
+              <div class="footer-latest-non-hover"></div>
+              <div class="footer-latest-desc">
+                <h4 class="h4-regular footer-text-color">Black & White</h4>
+                <div class="img-star">
+                  <img src="images/4-star.png" alt="star" />
+                </div>
+
+                <div class="footer-latest-price">
+                  <span class="h3-bold bg-post-color">$300.99</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="products-latest-item clearfix">
+              <div class="footer-latest-non-hover"></div>
+              <div class="footer-latest-desc">
+                <h4 class="h4-regular footer-text-color">White Sofa</h4>
+                <div class="img-star">
+                  <img src="images/5start.png" alt="star" />
+                </div>
+
+                <div class="footer-latest-price">
+                  <span class="price-linethrough footer-text-color">
+                    $190.00
+                  </span>
+                  <span class="h3-bold bg-post-color">$169.99</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="top-seller clearfix">
+            <h5 class="white-color">TOP SELLERS</h5>
+            <div class="hr-line-footer bg-yellow"></div>
+
+            <a href="#" class="products-seller-item clearfix">
+              <div class="footer-seller-non-hover"></div>
+              <div class="footer-seller-desc">
+                <h4 class="h4-regular footer-text-color">Green</h4>
+                <div class="img-star">
+                  <img src="images/5start.png" alt="star" />
+                </div>
+
+                <div class="footer-seller-price">
+                  <span class="h3-bold bg-post-color">$129.00</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="products-seller-item clearfix">
+              <div class="footer-seller-non-hover"></div>
+              <div class="footer-seller-desc">
+                <h4 class="h4-regular footer-text-color">Older Sofa</h4>
+                <div class="img-star">
+                  <img src="images/4-star.png" alt="star" />
+                </div>
+
+                <div class="footer-seller-price">
+                  <span class="price-linethrough footer-text-color">
+                    $469.00
+                  </span>
+                  <span class="h3-bold bg-post-color">$449.00</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="products-seller-item clearfix">
+              <div class="footer-seller-non-hover"></div>
+              <div class="footer-seller-desc">
+                <h4 class="h4-regular footer-text-color">
+                  Nude Color Armchair
+                </h4>
+                <div class="img-star">
+                  <img src="images/4-star.png" alt="star" />
+                </div>
+
+                <div class="footer-seller-price">
+                  <span class="h3-bold bg-post-color">$289.00</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="products-seller-item clearfix">
+              <div class="footer-seller-non-hover"></div>
+              <div class="footer-seller-desc">
+                <h4 class="h4-regular footer-text-color">Leather Armchair</h4>
+                <div class="img-star">
+                  <img src="images/4-star.png" alt="star" />
+                </div>
+
+                <div class="footer-seller-price">
+                  <span class="price-linethrough footer-text-color">
+                    $209.00
+                  </span>
+                  <span class="h3-bold bg-post-color">$189.00</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="instragram-feed clearfix">
+            <h5 class="white-color">INSTAGRAM FEED</h5>
+            <div class="hr-line-footer bg-yellow"></div>
+
+            <div class="instagram-items clearfix">
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+
+              <a href="#" class="instragram-links"
+                ><img src="images/instagram-feed.png" alt="insta"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="container-designer bg-chocolate text-center">
+      <h6 class="small text-white">
+        With <img src="images/heart-icon.png" alt="heart" /> by Dia Dea
+      </h6>
+
+      <a href="#top" id="scrollUp"> </a>
+    </div>
+
+    <!-- footer end -->
+
+    <!-- scroll up start -->
   </body>
 </html>
