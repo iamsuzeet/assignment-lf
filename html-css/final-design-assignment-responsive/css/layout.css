@@ -1,743 +1,731 @@
 /* some resusable css */
-
 .button-relative {
-  position: relative;
-  width: 156px;
+    position: relative;
+    width: 156px;
 }
 
 button.bg-chocolate,
 button.bg-gray {
-  width: 156px;
-  border: none;
-  outline: none;
+    width: 156px;
+    border: none;
+    outline: none;
 }
 
 /* container layout */
-
 .container {
-  max-width: 1140px;
-  margin: 0 auto;
+    max-width: 71.25em;
+    margin: 0 auto;
 }
 
 .container-navbar {
-  max-width: 1140px;
-  margin: 0 auto 82px;
+    max-width: 71.25em;
+    margin: 0 auto 82px;
 }
 
 .container-designer {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 131px 0 31px 0;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 131px 0 31px 0;
 }
 
 /* container layout end */
-
 /* header part start here */
 .header-wrapper {
-  padding-bottom: 234px;
+    padding-bottom: 234px;
 }
 
 .header-top-content {
-  margin-left: 52px;
-  margin-right: 68px;
-  padding-top: 62px;
+    margin-left: 52px;
+    margin-right: 68px;
+    padding-top: 62px;
 }
 
 .header-logo {
-  float: left;
+    float: left;
 }
 
 .header-nav {
-  float: right;
+    float: right;
 }
 
 .header-nav ul li {
-  display: inline-block;
-  padding-left: 64px;
+    display: inline-block;
+    padding-left: 64px;
 }
 
 .header-nav ul li.cart-li {
-  position: relative;
-  margin-right: 20px;
+    position: relative;
+    margin-right: 20px;
 }
 
 .cart-item-title {
-  position: absolute;
-  top: 7px;
-  padding-left: 2px;
+    position: absolute;
+    top: 7px;
+    padding-left: 2px;
 }
 
 /* featured product  */
 .featured-wrapper {
-  width: 825px;
-  margin: 53px auto 0;
-  position: relative;
+    max-width: 825px;
+    margin: 53px auto 0;
+    position: relative;
 }
 
 .slider.featured-left-slider {
-  display: block;
-  position: absolute;
-  background-image: url("../images/pentagon-small-left-non-hover.png");
-  background-repeat: no-repeat;
-  margin-right: 21px;
-  height: 44px;
-  width: 49px;
-  top: 50%;
-  left: -18px;
+    display: block;
+    position: absolute;
+    background-image: url("../images/pentagon-small-left-non-hover.png");
+    background-repeat: no-repeat;
+    margin-right: 21px;
+    height: 44px;
+    width: 49px;
+    top: 50%;
+    left: -18px;
 }
 
 .slider.featured-right-slider {
-  display: block;
-  position: absolute;
-  background-image: url("../images/pentagon-small-right-non-hover.png");
-  background-repeat: no-repeat;
-  margin-right: 21px;
-  height: 44px;
-  width: 49px;
-  top: 50%;
-  right: -39px;
+    display: block;
+    position: absolute;
+    background-image: url("../images/pentagon-small-right-non-hover.png");
+    background-repeat: no-repeat;
+    margin-right: 21px;
+    height: 44px;
+    width: 49px;
+    top: 50%;
+    right: -39px;
 }
 
 .featured-left-slider:hover {
-  background-image: url("../images/pentagon-small-left-hover.png");
+    background-image: url("../images/pentagon-small-left-hover.png");
 }
 
 .featured-right-slider:hover {
-  background-image: url("../images/pentagon-small-right-hover.png");
+    background-image: url("../images/pentagon-small-right-hover.png");
 }
 
 .featured-products {
-  width: 805px;
-  border: 10px solid #f9bf12;
-  padding-bottom: 279px;
+    width: 805px;
+    border: 10px solid #f9bf12;
+    padding-bottom: 279px;
 }
 
 .featured-products-top {
-  padding-top: 70px;
-  padding-bottom: 23px;
-  margin-left: 65px;
-  margin-right: 68px;
-  border-bottom: 2px solid #1c1105;
+    padding-top: 70px;
+    padding-bottom: 23px;
+    margin-left: 65px;
+    margin-right: 68px;
+    border-bottom: 2px solid #1c1105;
 }
 
 .featured-products-title {
-  float: left;
+    float: left;
 }
 
 .featured-products-button {
-  float: right;
+    float: right;
 }
 
 .button-absolute {
-  position: absolute;
-  bottom: -13px;
-  left: 140px;
+    position: absolute;
+    bottom: -13px;
+    left: 140px;
 }
 
 .products-title,
 .products-price,
 .products-color-alter {
-  float: left;
-  width: 208px;
-  margin-left: 45px;
-  margin-top: 41px;
+    float: left;
+    width: 208px;
+    margin-left: 45px;
+    margin-top: 41px;
 }
 
 .products-icon {
-  float: left;
-  padding-right: 10px;
+    float: left;
+    padding-right: 10px;
 }
 
 a.slider {
-  display: block;
-  width: 64px;
+    display: block;
+    width: 64px;
 }
 
 /* header part end here */
-
 /* navbar start here */
-
 .navbar-wrapper ul li {
-  display: inline-block;
-  margin-top: 46px;
-  margin-bottom: 40px;
-  padding-right: 54.03px;
-  letter-spacing: 2px;
+    display: inline-block;
+    margin-top: 46px;
+    margin-bottom: 40px;
+    padding-right: 60px;
+    letter-spacing: 1px;
 }
 
 /* navbar end here */
-
 /* section product collection start here */
 .products-items {
-  display: block;
-  position: relative;
-  float: left;
-  width: 365px;
-  background-image: url("../images/non-item-hover.jpg");
-  background-repeat: no-repeat;
-  min-height: 225px;
-  margin-right: 15px;
-  margin-bottom: 82px;
-  cursor: pointer;
+    display: block;
+    position: relative;
+    float: left;
+    width: 365px;
+    background-image: url("../images/non-item-hover.jpg");
+    background-repeat: no-repeat;
+    min-height: 225px;
+    margin-right: 15px;
+    margin-bottom: 82px;
+    cursor: pointer;
 }
 
 .products-items h4 {
-  padding-left: 34px;
-  padding-top: 33px;
+    padding-left: 34px;
+    padding-top: 33px;
 }
 
 .products-collection-button {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .products-items:hover {
-  background-image: url("../images/item-hover.jpg");
+    background-image: url("../images/item-hover.jpg");
 }
 
 .products-items:hover .products-collection-button {
-  visibility: visible;
+    visibility: visible;
 }
 
 .products-collection-button {
-  position: absolute;
-  top: 45%;
-  left: 30%;
+    position: absolute;
+    top: 45%;
+    left: 30%;
 }
 
 /* slider */
-
 .products-slider-arrow {
-  position: relative;
-  width: 200px;
-  margin: 0 auto;
-  margin-bottom: 100px;
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .products-slider-left {
-  display: inline-block;
-  background-image: url("../images/pentagon-small-left-non-hover.png");
-  background-repeat: no-repeat;
-  margin-right: 21px;
-  height: 47px;
-  width: 50px;
+    display: inline-block;
+    background-image: url("../images/pentagon-small-left-non-hover.png");
+    background-repeat: no-repeat;
+    margin-right: 21px;
+    height: 47px;
+    width: 50px;
 }
 
 .products-slider-right {
-  display: inline-block;
-  background-image: url("../images/pentagon-small-right-non-hover.png");
-  background-repeat: no-repeat;
-  margin-right: 21px;
-  height: 47px;
-  width: 50px;
+    display: inline-block;
+    background-image: url("../images/pentagon-small-right-non-hover.png");
+    background-repeat: no-repeat;
+    margin-right: 21px;
+    height: 47px;
+    width: 50px;
 }
 
 .products-slider-left:hover {
-  background-image: url("../images/pentagon-small-left-hover.png");
+    background-image: url("../images/pentagon-small-left-hover.png");
 }
 
 .products-slider-right:hover {
-  background-image: url("../images/pentagon-small-right-hover.png");
+    background-image: url("../images/pentagon-small-right-hover.png");
 }
 
 /* slider end */
-
 /* section product collection end here */
-
 /* latest furniture start here */
 .latest-furniture-items {
-  margin-top: 60px;
-  float: left;
-  margin-right: 15px;
+    margin-top: 60px;
+    float: left;
+    margin-right: 15px;
 }
 
 .card-furniture-items {
-  position: relative;
-  min-height: 395px;
-  width: 265px;
-  border: 1px solid #efefef;
+    position: relative;
+    min-height: 395px;
+    width: 265px;
+    border: 1px solid #efefef;
 }
 
 .card-label-description {
-  display: block;
+    display: block;
 }
 
 .card-label {
-  width: 56px;
-  padding: 9px 10px;
-  margin-left: 16px;
-  margin-top: 13px;
+    width: 56px;
+    padding: 9px 10px;
+    margin-left: 16px;
+    margin-top: 13px;
 }
 
 .card-label.promo {
-  width: 56px;
-  padding: 9px 10px;
-  margin-left: 16px;
-  margin-top: 13px;
+    width: 56px;
+    padding: 9px 10px;
+    margin-left: 16px;
+    margin-top: 13px;
 }
 
 .card-label.new {
-  width: 44px;
-  padding: 9px 10px;
-  margin-left: 16px;
-  margin-top: 13px;
+    width: 44px;
+    padding: 9px 10px;
+    margin-left: 16px;
+    margin-top: 13px;
 }
 
 .card-description {
-  margin-top: 200px;
-  margin-left: 25px;
-  margin-right: 25px;
+    margin-top: 200px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .card-description p {
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 .card-description h3.price {
-  margin-top: 24px;
-  padding-bottom: 30px;
+    margin-top: 24px;
+    padding-bottom: 30px;
 }
 
 .card-add-to-cart {
-  display: block;
-  width: 265px;
+    display: block;
+    width: 265px;
 }
+
 .card-add-to-cart {
-  line-height: 53px;
+    line-height: 53px;
 }
 
 .card-add-to-cart img {
-  margin-right: 5px;
-  margin-top: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
 }
 
 /* latest furniture end here */
-
 /* why choose youniverse start here */
 .why-choose-wrapper {
-  margin-top: 100px;
-  padding-bottom: 110px;
+    margin-top: 100px;
+
+    /* padding-bottom: 110px */
 }
 
 .why-choose-content-left {
-  width: 50%;
-  float: right;
+    width: 50%;
+    float: right;
 }
 
 .why-choose-content-right {
-  width: 50%;
-  float: right;
-  margin-top: 120px;
-  margin-bottom: 112px;
+    width: 50%;
+    float: right;
+    margin-top: 120px;
+    margin-bottom: 112px;
 }
 
 .why-choose-description {
-  margin-top: 43px;
+    margin-top: 43px;
 }
 
 .why-choose-content-right p {
-  line-height: 25px;
+    line-height: 25px;
 }
 
 /* accordion part */
 .accordion-wrapper .accordion-title {
-  width: 100%;
-  border: 1px solid #efefef;
-  cursor: pointer;
-  padding: 20px 0px 20px 28px;
-  margin-top: 15px;
-  position: relative;
+    width: 100%;
+    border: 1px solid #efefef;
+    cursor: pointer;
+    padding: 20px 0px 20px 28px;
+    margin-top: 15px;
+    position: relative;
 }
 
 .accordion-wrapper .accordion-title .accordion-status {
-  position: absolute;
-  background-image: url("../images/accordion-inactive.png");
-  top: 25%;
-  right: -15px;
-  width: 31px;
-  height: 31px;
+    position: absolute;
+    background-image: url("../images/accordion-inactive.png");
+    top: 25%;
+    right: -15px;
+    width: 31px;
+    height: 31px;
 }
 
 .accordion-wrapper .accordion-title:hover {
-  background-color: #f9bf12;
-  border: 1px solid #f9bf12;
+    background-color: #f9bf12;
+    border: 1px solid #f9bf12;
 }
 
 .accordion-wrapper .accordion-title:hover .accordion-status {
-  background-image: url("../images/accordion-active.png");
+    background-image: url("../images/accordion-active.png");
 }
 
 .accordion-wrapper .accordion-desc p {
-  display: none;
-  margin-top: 26px;
+    display: none;
+    margin-top: 26px;
 }
 
 .accordion-wrapper .accordion-title:hover + .accordion-desc p {
-  display: block;
+    display: block;
 }
 
 /* why choose youniverse end here */
-
 /* latest post start */
 .latest-posts-content {
-  margin-top: 100px;
-  margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .latest-posts {
-  margin-top: 48px;
+    margin-top: 48px;
 }
 
 .latest-posts-items {
-  display: block;
-  position: relative;
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 33px;
-  cursor: pointer;
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 33px;
+    cursor: pointer;
 }
 
 .latest-posts-image {
-  width: 364px;
-  background-image: url("../images/latest-post.png");
-  background-repeat: no-repeat;
-  min-height: 193px;
+    width: 364px;
+    background-image: url("../images/latest-post.png");
+    background-repeat: no-repeat;
+    min-height: 193px;
 }
 
 .latest-posts-image:hover {
-  background-image: url("../images/latest-post-hover.png");
+    background-image: url("../images/latest-post-hover.png");
 }
 
 .latest-posts-details {
-  margin-top: 19px;
+    margin-top: 19px;
 }
 
 .latest-posts-date {
-  min-width: 57px;
-  min-height: 52px;
-  border: 1px solid #efefef;
-  text-align: center;
-  margin-right: 20px;
-  float: left;
+    min-width: 57px;
+    min-height: 52px;
+    border: 1px solid #efefef;
+    text-align: center;
+    margin-right: 20px;
+    float: left;
 }
 
 .latest-posts-description {
-  float: left;
-  max-width: 286px;
+    float: left;
+    max-width: 286px;
 }
 
 .latest-posts-description h3 {
-  line-height: 30px;
+    line-height: 30px;
 }
+
 .latest-posts-description p {
-  margin-top: 10px;
-  line-height: 22px;
+    margin-top: 10px;
+    line-height: 22px;
 }
 
 .latest-posts-description li {
-  display: inline-block;
-  margin-right: 8px;
+    display: inline-block;
+    margin-right: 8px;
 }
 
 /* latest post end here */
-
 /* get discount start here */
 .get-discount-wrapper {
-  background-image: url("../images/clippart-background.png");
-  background-size: 100% 100%;
-  height: 436px;
-  width: 100%;
+    background-image: url("../images/clippart-background.png");
+    background-size: 100% 100%;
+    height: 436px;
+    width: 100%;
 }
 
 /* get discount end here */
 .get-discount-content-left {
-  width: 50%;
-  float: left;
+    width: 50%;
+    float: left;
 }
 
 .get-discount-content-right {
-  width: 50%;
-  float: right;
-  margin-top: 89px;
-  margin-bottom: 78px;
-  margin-left: 33px;
+    width: 50%;
+    float: right;
+    margin-top: 89px;
+    margin-bottom: 78px;
+    margin-left: 33px;
 }
 
 .get-discount-form {
-  margin-top: 33px;
+    margin-top: 33px;
 }
 
 .get-discount-form p {
-  line-height: 25px;
-  padding-bottom: 25px;
+    line-height: 25px;
+    padding-bottom: 25px;
 }
 
 .input-your-name input {
-  float: left;
-  margin-right: 3%;
-  width: 40%;
-  border: 1px solid #fff;
-  background-color: #323232;
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  color: #efefef;
-  margin-bottom: 40px;
+    float: left;
+    margin-right: 3%;
+    width: 40%;
+    border: 1px solid #fff;
+    background-color: #323232;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #efefef;
+    margin-bottom: 40px;
 }
 
 .input-your-email input {
-  float: left;
-  width: 40%;
-  border: 1px solid #fff;
-  background-color: #323232;
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  color: #efefef;
-  margin-left: 4.5%;
-  margin-bottom: 40px;
+    float: left;
+    width: 40%;
+    border: 1px solid #fff;
+    background-color: #323232;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #efefef;
+    margin-left: 4.5%;
+    margin-bottom: 40px;
 }
 
 /* get discount end here */
-
 /* newest collection start */
 .collection-content {
-  margin-top: 100px;
-  margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .collection-tags {
-  max-width: 640px;
-  margin: 0 auto;
-  margin-top: 39px;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 39px;
 }
 
 .collection-tags ul li {
-  display: inline-block;
-  width: 110px;
-  border: 1px solid #c4c4bf;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #fff;
-  margin-right: 12px;
-  text-align: center;
+    display: inline-block;
+    width: 110px;
+    border: 1px solid #c4c4bf;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    margin-right: 12px;
+    text-align: center;
 }
 
 .collection-tags ul li.active,
 .collection-tags ul li:hover {
-  border: 1px solid #f9bf12;
-  background-color: #f9bf12;
+    border: 1px solid #f9bf12;
+    background-color: #f9bf12;
 }
 
 .collection-tags ul li.active a,
 .collection-tags ul li:hover a {
-  color: #fff;
+    color: #fff;
 }
 
 .collection-tags ul li a {
-  color: #1c1105;
-  font-size: 12px;
-  font-weight: 700;
+    color: #1c1105;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .collection-image-desc {
-  background-image: url("../images/collection-image.png");
+    background-image: url("../images/collection-image.png");
 }
 
 .collection-posts {
-  margin-top: 66px;
+    margin-top: 66px;
 }
 
 a.collection-posts-items {
-  display: block;
-  position: relative;
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 33px;
-  cursor: pointer;
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 33px;
+    cursor: pointer;
 }
 
 .collection-posts-image {
-  width: 364px;
-  background-image: url("../images/collection-image.png");
-  background-repeat: no-repeat;
-  min-height: 234px;
+    width: 364px;
+    background-image: url("../images/collection-image.png");
+    background-repeat: no-repeat;
+    min-height: 234px;
 }
 
 .collection-posts-desc {
-  display: none;
+    display: none;
 }
 
 .collection-posts-desc h5 {
-  padding-top: 67px;
+    padding-top: 67px;
 }
 
 .collection-posts-desc h2 {
-  padding-top: 18px;
+    padding-top: 18px;
 }
 
 .collection-posts-desc p {
-  padding-top: 18px;
-  padding-left: 28px;
-  padding-right: 28px;
+    padding-top: 18px;
+    padding-left: 28px;
+    padding-right: 28px;
 }
 
 a.collection-posts-items:hover .collection-posts-desc {
-  display: block;
-  background-color: #f9c428;
-  min-height: 234px;
+    display: block;
+    background-color: #f9c428;
+    min-height: 234px;
 }
+
 /* newest collection end */
-
 /* contact us start */
-
 .contact-wrapper {
-  margin-left: 97px;
-  margin-right: 97px;
-  margin-top: 108px;
-  margin-bottom: 91px;
+    margin-left: 97px;
+    margin-right: 97px;
+    margin-top: 108px;
+    margin-bottom: 91px;
 }
 
 .contact-left {
-  float: left;
+    float: left;
 }
 
 .contact-title p {
-  margin-top: 7px;
-  margin-bottom: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .contact-address,
 .contact-phone-no,
 .contact-email-us {
-  margin-top: 46px;
+    margin-top: 46px;
 }
 
 .contact-left h5 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .contact-left p {
-  line-height: 20px;
+    line-height: 20px;
 }
 
 .contact-right {
-  float: right;
-  width: 620px;
+    float: right;
+    width: 620px;
 }
 
 .contact-name input,
 .contact-email input,
 .contact-subject input,
 .contact-textarea textarea {
-  width: 100%;
-  border: 1px solid #c4c4bf;
-  padding-left: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  color: #c4c4bf;
-  margin-bottom: 16px;
+    width: 100%;
+    border: 1px solid #c4c4bf;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #c4c4bf;
+    margin-bottom: 16px;
 }
 
 /* contact us end */
-
 /* footer part start */
 .footer-content {
-  margin-top: 87px;
-  margin-bottom: 130px;
+    margin-top: 87px;
+    margin-bottom: 130px;
 }
 
 .social-links-about,
 .footer-latest-products,
 .top-seller,
 .instragram-feed {
-  width: 267px;
-  float: left;
-  margin-right: 18px;
+    width: 267px;
+    float: left;
+    margin-right: 18px;
 }
 
 .footer-content p.h5-light {
-  line-height: 28px;
+    line-height: 28px;
 }
 
 .footer-content .second {
-  margin-top: 16px;
+    margin-top: 16px;
 }
 
 .footer-content .relative {
-  position: relative;
+    position: relative;
 }
 
 .footer-content .link-absolute {
-  position: absolute;
-  top: 3px;
-  left: 33px;
+    position: absolute;
+    top: 3px;
+    left: 33px;
 }
 
 .footer-social-links {
-  margin-top: 87px;
+    margin-top: 87px;
 }
 
 .footer-social-links a {
-  display: block;
+    display: block;
 }
 
 .footer-content .link-items {
-  float: left;
-  position: relative;
-  width: 125px;
-  margin-right: 8px;
-  margin-bottom: 20px;
+    float: left;
+    position: relative;
+    width: 125px;
+    margin-right: 8px;
+    margin-bottom: 20px;
 }
 
 .footer-content .social-link-relative {
-  position: absolute;
-  top: -3px;
-  left: 35px;
+    position: absolute;
+    top: -3px;
+    left: 35px;
 }
 
 .link-hover:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .products-latest-item,
 .products-seller-item {
-  display: block;
-  margin-top: 19px;
+    display: block;
+    margin-top: 19px;
 }
 
 .footer-latest-non-hover,
 .footer-seller-non-hover {
-  float: left;
-  background-image: url("../images/footer-small-non-hover.png");
-  width: 77px;
-  height: 77px;
+    float: left;
+    background-image: url("../images/footer-small-non-hover.png");
+    width: 77px;
+    height: 77px;
 }
 
 .products-latest-item:hover .footer-latest-non-hover,
 .products-seller-item:hover .footer-seller-non-hover {
-  background-image: url("../images/footer-small-hover.png");
+    background-image: url("../images/footer-small-hover.png");
 }
 
 .footer-latest-desc,
 .footer-seller-desc {
-  float: left;
-  padding-left: 21px;
+    float: left;
+    padding-left: 21px;
 }
 
 .footer-latest-desc div,
 .footer-seller-desc div {
-  margin-top: 9px;
+    margin-top: 9px;
 }
 
 .instagram-items {
-  margin-top: 55px;
+    margin-top: 55px;
 }
 
 .instagram-links {
-  display: block;
-  float: left;
-  margin-right: 11px;
+    display: block;
+    float: left;
+    margin-right: 11px;
 }
 
 /* footer part end */

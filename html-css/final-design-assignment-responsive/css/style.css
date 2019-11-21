@@ -9,7 +9,7 @@
 }
 
 .bg-chocolate {
-  background-color: #1c1206;
+  background-color: #1c1105;
 }
 
 .bg-light-chocolate {
@@ -30,7 +30,6 @@
 }
 
 /* default text color */
-
 .bg-post-color {
   color: #fbcd41;
 }
@@ -140,9 +139,7 @@ span.h6-bold {
 }
 
 /* header (h1-h6) end here */
-
 /* some button styling start */
-
 .btn-text {
   color: #fff;
   line-height: 43px;
@@ -165,7 +162,6 @@ span.h6-bold {
 }
 
 /* button styling end */
-
 /* hr line */
 .hr-line {
   max-width: 66px;
@@ -188,7 +184,6 @@ span.h6-bold {
 }
 
 /* hr line end */
-
 /* header part start here */
 .cart-item-count {
   font-size: 35px;
@@ -200,9 +195,7 @@ span.h6-bold {
 }
 
 /* header part end here */
-
 /* navbar part start here */
-
 .navbar-wrapper ul li {
   text-transform: uppercase;
   color: #fff;
@@ -216,22 +209,19 @@ span.h6-bold {
 }
 
 /* navbar end here */
-
 /* latest post start here */
 .latest-posts-description li span {
   font-size: 14px;
   font-weight: 400;
 }
-/* latest post end here */
 
+/* latest post end here */
 /* scroll up style */
 #scrollUp {
   background-image: url("../images/go-to-up-arrow.png");
   bottom: 20px;
-
   font-size: 22px;
   height: 48px;
-
   position: absolute;
   bottom: 50px;
   right: 200px;
