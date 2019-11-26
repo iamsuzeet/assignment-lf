@@ -1,40 +1,39 @@
-console.log("----loop and functions------");
+console.log('----loop and functions------');
 function pattern() {
   // var input = prompt("enter input:")
-  var star = "";
+  var star = '';
   for (var i = input; i > 0; i--) {
-
-    for(var j=0; j < i; j++){
-      star+= '* '
+    for (var j = 0; j < i; j++) {
+      star += '* ';
     }
-   console.log(star);
-   star = "";
+    console.log(star);
+    star = '';
   }
 }
 
-console.log("-----objects NO.1-------");
+console.log('-----objects NO.1-------');
 const myInfo = {
-  name: "Sujit",
-  address: "Gwarko",
-  email: "abc@gmail.com",
-  interests: "gaming",
+  name: 'Sujit',
+  address: 'Gwarko',
+  email: 'abc@gmail.com',
+  interests: 'gaming',
   education: [
-    { name: "NCS", enrolledDate: 2000 },
-    { name: "Aberdeen", enrolledDate: 2006 }
+    { name: 'NCS', enrolledDate: 2000 },
+    { name: 'Aberdeen', enrolledDate: 2006 }
   ]
 };
 
 myInfo.education.forEach(function(education) {
   console.log(
-    "Name: " + education.name + ", " + "Date :" + education.enrolledDate
+    'Name: ' + education.name + ', ' + 'Date :' + education.enrolledDate
   );
 });
 
-console.log("-----object NO.2------");
+console.log('-----object NO.2------');
 
 var fruits = [
-  { id: 1, name: "Banana", color: "Yellow" },
-  { id: 2, name: "Apple", color: "Red" }
+  { id: 1, name: 'Banana', color: 'Yellow' },
+  { id: 2, name: 'Apple', color: 'Red' }
 ];
 
 function searchByName(fruits, name) {
@@ -48,9 +47,9 @@ function searchByName(fruits, name) {
   console.log(results);
 }
 
-searchByName(fruits, "Apple");
+searchByName(fruits, 'Apple');
 
-console.log("--------functions------");
+console.log('--------functions------');
 var numbers = [1, 2, 3, 4];
 
 function transform(collection, tranFunc) {
@@ -67,19 +66,19 @@ var output = transform(numbers, function(num) {
 
 console.log(output);
 
-console.log("---------sorting---------");
+console.log('---------sorting---------');
 var arr = [
   {
     id: 1,
-    name: "John"
+    name: 'John'
   },
   {
     id: 2,
-    name: "Mary"
+    name: 'Mary'
   },
   {
     id: 3,
-    name: "Andrew"
+    name: 'Andrew'
   }
 ];
 
@@ -88,9 +87,8 @@ function sortBy(array, key) {
   var key = key;
 
   newArr.sort(function(a, b) {
-    
     var compareA = a[key];
-    
+
     var compareB = b[key];
     if (compareA < compareB) {
       return -1;
@@ -105,15 +103,14 @@ function sortBy(array, key) {
 
   console.log('sorted array');
   console.log(newArr);
-  
+
   console.log('old array');
   console.log(arr);
-  
 }
 
-var sorted = sortBy(arr, "name");
+var sorted = sortBy(arr, 'name');
 
-console.log("------Normalization-----");
+console.log('------Normalization-----');
 
 // From this
 var input = {
@@ -131,8 +128,6 @@ var input = {
     children: [{ id: 6, name: 'Peter' }]
   }
 };
-
-
 
 function normalize(input) {
   var keys = Object.keys(input);
