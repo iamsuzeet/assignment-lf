@@ -130,32 +130,8 @@ var input = {
 };
 
 function normalize(input) {
-  var keys = Object.keys(input);
-
-  return keys.reduce(function(acc, key) {
-    if (!acc[key]) {
-      acc[key] = input[key];
-    }
-
-    flattenChild(acc[key], acc);
-
-    return acc;
-  }, {});
+  var result = [];
+  var person = [];
 }
-
-function flattenChild(obj, parent) {
-  if (!obj.children) {
-    return;
-  }
-
-  obj.children.forEach(function(value, index) {
-    parent[value.id] = value;
-    obj.children[index] = value.id;
-
-    flattenChild(value, parent);
-  });
-}
-
-var output = normalize(input);
 
 console.log(output);
