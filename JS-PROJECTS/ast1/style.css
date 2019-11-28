@@ -70,3 +70,12 @@ img {
 .carousel-dots button:hover {
   background: #fff;
 }
+
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}

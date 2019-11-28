@@ -6,11 +6,9 @@ var dots = carouselDots.children;
 
 var next = document.getElementById('next');
 var prev = document.getElementById('prev');
-var auto = true;
-var INTERVAL_TIME = 4000;
+
 var IMG_WIDTH = 900;
 var IMG_HEIGHT = 600;
-var slideInterval;
 
 // setting carousel container width and height;
 carouselContainer.style.width = IMG_WIDTH + 'px';
@@ -40,13 +38,11 @@ carouselDots[0].classList.add('active-dots');
 //next button click
 next.addEventListener('click', function() {
   nextSlide();
-  clearResetInterval();
 });
 
 //previous button click
 prev.addEventListener('click', function() {
   prevSlide();
-  clearResetInterval();
 });
 
 //slide to next image
@@ -94,9 +90,9 @@ function prevSlide() {
     //slide to previous image
     moveSlide(carouselImageWrapper, currentImage, previousImage);
 
-    carouselImageWrapper.style.transform = 'translateX()';
-    currentImage.classList.remove('active');
-    previousImage.classList.add('active');
+    // carouselImageWrapper.style.transform = 'translateX()';
+    // currentImage.classList.remove('active');
+    // previousImage.classList.add('active');
 
     //update dots
     var currentDot = carouselDots.querySelector('.active-dots');
@@ -133,25 +129,10 @@ carouselDots.addEventListener('click', function(e) {
   moveSlide(carouselImageWrapper, currentImage, targetImage);
   updateDots(currentDot, targetDot);
 
-  clearResetInterval();
 });
 
 //update class to target dots
 function updateDots(currentDot, targetDot) {
   currentDot.classList.remove('active-dots');
   targetDot.classList.add('active-dots');
-}
-
-//clearing interval and setting new interval if next/prev button clicked or carousel dots clicked
-function clearResetInterval() {
-  if (auto) {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, INTERVAL_TIME);
-  }
-}
-
-//auto slide
-if (auto) {
-  // run next slide at interval
-  slideInterval = setInterval(nextSlide, INTERVAL_TIME);
 }
