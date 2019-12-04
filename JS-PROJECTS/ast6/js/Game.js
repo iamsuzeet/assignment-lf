@@ -6,7 +6,7 @@ import Pipe from './Pipe.js';
 export default class Game {
   constructor(game, gameImage) {
     console.log(gameImage);
-
+    
     this.ctx = game.cvs.getContext('2d');
     this.cvs = game.cvs;
     this.frames = 0;

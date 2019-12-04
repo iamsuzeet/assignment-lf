@@ -1,6 +1,6 @@
 import Game from './Game.js';
-const gameImage = new Image();
-gameImage.src = '../images/sprite.png';
+var gameImage = document.createElement('img');
+gameImage.setAttribute('src', '../images/sprite.png');
 
 export default class FlappyBird {
   constructor(gameId) {
