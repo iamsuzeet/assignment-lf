@@ -4,7 +4,9 @@ import eventHandler from './eventHandler.js';
 import Pipe from './Pipe.js';
 
 export default class Game {
-  constructor(game) {
+  constructor(game, gameImage) {
+    console.log(gameImage);
+
     this.ctx = game.cvs.getContext('2d');
     this.cvs = game.cvs;
     this.frames = 0;
@@ -18,12 +20,11 @@ export default class Game {
       best: parseInt(localStorage.getItem('best')) || 0,
       value: 0
     };
-    this.gameImage = new Image();
-    this.gameImage.src = '../images/sprite.png';
+    this.gameImage = gameImage;
+
     this.bird = new Bird(this);
     this.foreground = new ForeGround(this);
     this.pipes = new Pipe(this);
-
     eventHandler(this);
   }
 
@@ -43,7 +44,6 @@ export default class Game {
     this.bird.draw();
     this.pipes.draw();
 
-    
     this.renderGetReadyState();
     this.renderGameOver();
     this.renderScoreState();
