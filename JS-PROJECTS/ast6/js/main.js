@@ -1,12 +1,12 @@
 import Game from './Game.js';
-var gameImage = document.createElement('img');
-gameImage.setAttribute('src', '../images/sprite.png');
 
+var gameImage = document.getElementById('gameImage')
 export default class FlappyBird {
   constructor(gameId) {
     this.gameId = gameId;
     this.cvs = document.getElementById(`${this.gameId}`);
-    this.game = new Game(this, gameImage);
+    this.gameImage = gameImage;
+    this.game = new Game(this);
     this.gameloop();
   }
 
@@ -18,8 +18,6 @@ export default class FlappyBird {
   }
 }
 
-gameImage.onload = function() {
-  new FlappyBird('game1', gameImage);
-  new FlappyBird('game2', gameImage);
-  new FlappyBird('game3', gameImage);
-};
+new FlappyBird('game1');
+new FlappyBird('game2');
+new FlappyBird('game3');

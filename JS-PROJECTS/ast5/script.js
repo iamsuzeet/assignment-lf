@@ -102,10 +102,8 @@ function GameOver(
 
   this.gameContainer.appendChild(this.gameOver);
 
-  var gameOverClass = this.gameOver.classList[0];
-
   document
-    .querySelector('.' + gameOverClass + ' > #play-again')
+    .querySelector('.' + this.gameOver.classList[0] + ' > #play-again')
     .addEventListener('click', function() {
       self.gameScoreWrapper.remove();
       new GameCreate(self.oldGame);
@@ -294,7 +292,7 @@ GameStart.prototype.cycleTrack = function() {
     }
 
     if (this.playerCar.bullets.length > 0) {
-      var check = 750;
+      var check = 1500;
       var lastBullet = parseInt(
         this.playerCar.bullets[this.playerCar.bullets.length - 1].style.bottom
       );
@@ -303,8 +301,6 @@ GameStart.prototype.cycleTrack = function() {
         this.playerCar.shooting = false;
         this.playerCar.bullets = [];
       }
-
-      console.log(this.playerCar.bullets);
     }
   }
 

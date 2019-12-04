@@ -4,9 +4,7 @@ import eventHandler from './eventHandler.js';
 import Pipe from './Pipe.js';
 
 export default class Game {
-  constructor(game, gameImage) {
-    console.log(gameImage);
-    
+  constructor(game) {
     this.ctx = game.cvs.getContext('2d');
     this.cvs = game.cvs;
     this.frames = 0;
@@ -20,7 +18,8 @@ export default class Game {
       best: parseInt(localStorage.getItem('best')) || 0,
       value: 0
     };
-    this.gameImage = gameImage;
+    this.gameImage = game.gameImage;
+      
 
     this.bird = new Bird(this);
     this.foreground = new ForeGround(this);

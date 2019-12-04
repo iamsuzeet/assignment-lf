@@ -16,11 +16,11 @@ function gameOver() {
   gameContainer.innerHTML =
     '<div class="game-over"><h2>CRASHED !!! GAME OVER</h2><p>Use arrow keys or A/D for left and right movement</p><button id="play-again" class="start-button">PLAY AGAIN</button></div>';
 
-  var gameOverContainer = document.createElement('div');
+  // var gameOverContainer = document.createElement('div');
 
-  gameOverContainer.classList.add('game-over');
-  gameOverContainer.innerHTML =
-    '<h2>CRASHED !!! GAME OVER</h2><p>Use arrow keys or A/D for left and right movement</p><button id="play-again" class="start-button">PLAY AGAIN</button>';
+  // gameOverContainer.classList.add('game-over');
+  // gameOverContainer.innerHTML =
+  //   '<h2>CRASHED !!! GAME OVER</h2><p>Use arrow keys or A/D for left and right movement</p><button id="play-again" class="start-button">PLAY AGAIN</button>';
 
   document.getElementById('play-again').addEventListener('click', startGame);
 }

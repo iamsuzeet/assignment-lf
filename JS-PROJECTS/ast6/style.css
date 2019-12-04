@@ -5,3 +5,7 @@ canvas {
   margin: 2% 5%;
   border: 1px solid #000;
 }
+
+img#gameImage {
+  display: none;
+}
