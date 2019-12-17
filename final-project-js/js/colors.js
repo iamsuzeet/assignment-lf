@@ -1,7 +1,7 @@
 /**
  * return random color;
  */
-var colors = ['#FF3399', '#33FFFF', '#FFFF33', '#AA00FF'];
+export var colors = ['#FF3399', '#33FFFF', '#FFFF33', '#AA00FF'];
 
 export function getColor(index) {
   var n = index;
