@@ -31,20 +31,22 @@ export function drawCircle(coords, radius, color, game) {
 
 export function modAngle(x) {
   var y = x;
+  //for getting positive angle
   while (y < 0) {
     y += Math.PI * 2;
   }
   return y % (Math.PI * 2);
-  
 }
 
 /**
- * get dots
+ * get distance and angle
  */
 
-export function getDots(xy1, xy2) {
+export function getDistanceAngle(xy1, xy2) {
   return {
-    d: Math.sqrt(Math.pow(xy1.x - xy2.x, 2) + Math.pow(xy1.y - xy2.y, 2)),
-    a: Math.atan2(xy1.y - xy2.y, xy2.x - xy1.x)
+    distance: Math.sqrt(
+      Math.pow(xy1.x - xy2.x, 2) + Math.pow(xy1.y - xy2.y, 2)
+    ),
+    angle: Math.atan2(xy1.y - xy2.y, xy2.x - xy1.x)
   };
 }
