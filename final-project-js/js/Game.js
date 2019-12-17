@@ -1,5 +1,7 @@
 import Player from './Player.js';
 import CircleObstacle from './CircleObstacle.js';
+import ColorSwitch from './ColorSwitch.js';
+
 //helper functions
 import { coordinates, randomValue } from './utility.js';
 import { getColor, colorIndex } from './colors.js';
@@ -116,7 +118,7 @@ class Game {
   generateObstacles() {
     while (
       this.obstacles.number <
-      1 + Math.floor(this.topY / this.obstacles.posY)
+      2 + Math.floor(this.topY / this.obstacles.posY)
     ) {
       this.obstacles.number += 1;
 
@@ -130,6 +132,9 @@ class Game {
           );
           break;
       }
+
+      //player color switch
+      new ColorSwitch(this);
       this.defaultSpeed *= 1.04;
     }
   }
@@ -139,11 +144,21 @@ class Game {
     for (var i in this.obstaclesArr) {
       this.obstaclesArr[i].update();
     }
+    for (var i = this.obstaclesArr.length - 1; i >= 0; i--) {
+      if (this.obstaclesArr[i].isDestroyed) {
+        this.obstaclesArr.splice(i, 1);
+      }
+    }
   }
 
   // update top y after player tap and counter after gameover
   updateTopYCounter() {
     this.topY = Math.max(this.topY, this.playerInfo.posy - 250);
+  }
+
+  // game over
+  gameIsOver() {
+    console.log('oops game over');
   }
 }
 
