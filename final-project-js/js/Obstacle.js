@@ -15,9 +15,15 @@ export default class Obstacle {
       color,
       obstacleCount: 0,
       isDestroyed: false,
+      move: () => {},
       draw: () => {
         drawCircle(
-          coordinates(this.newObstacle.posx, this.newObstacle.posy,this.gameCanvasHeight, this.topY),
+          coordinates(
+            this.newObstacle.posx,
+            this.newObstacle.posy,
+            this.gameCanvasHeight,
+            this.topY
+          ),
           this.newObstacle.radius,
           this.newObstacle.color,
           this.game
@@ -27,7 +33,10 @@ export default class Obstacle {
         this.newObstacle.isDestroyed = true;
       },
       update: () => {
-        //draw circle;
+        //move obstacles
+        this.newObstacle.move();
+
+        //draw obstacles;
         this.newObstacle.draw();
 
         if (this.newObstacle.posy + 100 < this.topY) {
