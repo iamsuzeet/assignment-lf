@@ -4,7 +4,8 @@ export default class Player {
   constructor(game) {
     this.game = game;
     this.playerInfo = this.game.playerInfo;
-
+    console.log(this.playerInfo.color);
+    
     this.init();
   }
 
@@ -30,8 +31,7 @@ export default class Player {
       );
 
       if (this.playerInfo.posy < this.game.topY) {
-        console.log('game end here');
-        
+        this.game.gameIsOver();
       }
 
       drawCircle(
@@ -45,7 +45,6 @@ export default class Player {
         this.playerInfo.color,
         this.game
       );
-
     }
   }
 }
