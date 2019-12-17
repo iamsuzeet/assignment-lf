@@ -1,5 +1,5 @@
 import Obstacle from './Obstacle.js';
-import { coordinates, modAngle } from './utility.js';
+import { coordinates, modAngle, getDistanceAngle } from './utility.js';
 import { getColor } from './colors.js';
 
 export default class CircleObstacle {
@@ -12,6 +12,9 @@ export default class CircleObstacle {
     this.radius = radius;
     this.speed = speed;
     this.direction = direction;
+
+    //player info
+    this.playerInfo = this.game.playerInfo;
 
     this.circle = new Obstacle(
       this.game.gameCanvasWidth / 2,
@@ -50,9 +53,35 @@ export default class CircleObstacle {
          */
         var a = modAngle(this.circle.angle + (Math.PI / 2) * j);
         var a2 = modAngle(a + Math.PI / 2);
+        if (
+          getColor(j + this.circle.color) != this.playerInfo.color &&
+          !this.game.gameOver
+        ) {
+          //get distance and angle from two coordinates
+          var dots = getDistanceAngle(
+            coord,
+            coordinates(
+              this.playerInfo.posx,
+              this.playerInfo.posy,
+              this.game.gameCanvasHeight,
+              this.game.topY
+            )
+          );
+
+          //check both up collison and down collison
+          if (
+            dots.distance - this.playerInfo.radius <
+              this.circle.radius + this.circle.width / 2 &&
+            dots.distance + this.playerInfo.radius >
+              this.circle.radius - this.circle.width / 2
+          ) {
+            console.log('collison');
+          }
+        }
         this.ctx.arc(coord.x, coord.y, this.circle.radius, a, a2);
         this.ctx.stroke();
       }
+      this.circle.angle += (this.circle.speed * Math.PI) / 180;
     };
   }
 }
