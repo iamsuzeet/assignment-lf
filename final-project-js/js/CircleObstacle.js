@@ -1,4 +1,6 @@
 import Obstacle from './Obstacle.js';
+import scatterPlayer from './scatterPlayer.js';
+
 import { coordinates, modAngle, getDistanceAngle } from './utility.js';
 import { getColor } from './colors.js';
 
@@ -75,7 +77,10 @@ export default class CircleObstacle {
             dots.distance + this.playerInfo.radius >
               this.circle.radius - this.circle.width / 2
           ) {
-            console.log('collison');
+            var positiveAngle = modAngle(-dots.angle);
+            if (positiveAngle > a && positiveAngle < a2) {
+              scatterPlayer(this.game);
+            }
           }
         }
         this.ctx.arc(coord.x, coord.y, this.circle.radius, a, a2);
