@@ -37,7 +37,7 @@ export default class ColorSwitch {
         while (this.playerInfo.color == changeColor) {
           changeColor = colors[Math.floor(4 * Math.random())];
         }
-        sound.switchSound.play();
+        document.getElementById('colorswitch').play();
         this.playerInfo.color = changeColor;
         //destroy switch after collison from obstacle array
         this.colSwitch.destroy();
