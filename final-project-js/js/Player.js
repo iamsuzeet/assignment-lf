@@ -1,17 +1,19 @@
+import { sound } from './audio.js';
+
+import scatterPlayer from './scatterPlayer.js';
 import { drawCircle, coordinates } from './utility.js';
 
 export default class Player {
   constructor(game) {
     this.game = game;
     this.playerInfo = this.game.playerInfo;
-    console.log(this.playerInfo.color);
-    
     this.init();
   }
 
   init() {
     if (!this.game.gameOver) {
       if (this.game.clicked) {
+        sound.tapSound.play();
         this.playerInfo.playerSpeed = this.playerInfo.maxPlayerSpeed;
 
         if (this.playerInfo.acceleration == 0) {
@@ -31,7 +33,7 @@ export default class Player {
       );
 
       if (this.playerInfo.posy < this.game.topY) {
-        this.game.gameIsOver();
+        scatterPlayer(this.game);
       }
 
       drawCircle(
