@@ -26,6 +26,47 @@ export function drawCircle(coords, radius, color, game) {
 }
 
 /**
+ * Draw star shape
+ */
+
+export function drawStar(
+  posx,
+  posy,
+  radius1,
+  angle,
+  color,
+  alpha,
+  outline,
+  game
+) {
+  var ctx = game.ctx;
+  var coord = coordinates(posx, posy, game.gameCanvasHeight, game.topY);
+  ctx.fillStyle = color;
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.globalAlpha = alpha;
+  ctx.beginPath();
+  for (var j = 0; j <= 5; j++) {
+    var angle1 = (j * Math.PI * 2) / 5 - Math.PI / 2 - angle;
+    var angle2 = angle1 + Math.PI / 5;
+    var radius2 = radius1 * 0.5;
+    ctx.lineTo(
+      coord.x + radius1 * Math.cos(angle1),
+      coord.y + radius1 * Math.sin(angle1)
+    );
+    ctx.lineTo(
+      coord.x + radius2 * Math.cos(angle2),
+      coord.y + radius2 * Math.sin(angle2)
+    );
+  }
+
+  if (outline) {
+    ctx.fill();
+  } 
+  ctx.globalAlpha = 1;
+}
+
+/**
  * mod angle
  */
 
@@ -49,4 +90,12 @@ export function getDistanceAngle(xy1, xy2) {
     ),
     angle: Math.atan2(xy1.y - xy2.y, xy2.x - xy1.x)
   };
+}
+
+/**
+ * get random range
+ */
+
+export function randomRange(x1, x2) {
+  return x1 + Math.random() * (x2 - x1);
 }
