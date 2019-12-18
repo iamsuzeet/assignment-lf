@@ -1,5 +1,7 @@
 import Player from './Player.js';
 import CircleObstacle from './CircleObstacle.js';
+import LeftCircle from './LeftCircle.js';
+import RightCircle from './RightCircle.js';
 import ColorSwitch from './ColorSwitch.js';
 import ScoreStar from './ScoreStar.js';
 
@@ -125,15 +127,36 @@ class Game {
     ) {
       this.obstacles.number += 1;
 
-      switch (randomValue(0)) {
+      switch (randomValue(2)) {
         case 0:
           new CircleObstacle(
             this,
             randomValue(100, 100, 70),
             1,
-            randomValue(-1, 1)
+            randomValue(-1, 1),
+            this.gameCanvasWidth / 2
           );
           break;
+        case 1:
+          new CircleObstacle(this, 100, 2 / 3, 1, this.gameCanvasWidth / 2);
+          new CircleObstacle(this, 83, 1, -1, this.gameCanvasWidth / 2);
+          break;
+        case 2:
+          var a1 = new LeftCircle(
+            this,
+            70,
+            1,
+            1,
+            this.gameCanvasWidth - 105
+          );
+          new RightCircle(
+            this,
+            70,
+            1,
+            -1,
+            this.gameCanvasWidth / 3.4,
+            a1.circle.color
+          );
       }
 
       //player color switch
@@ -173,7 +196,7 @@ class Game {
       this.ctx.fillStyle = '#222';
       this.ctx.fillRect(0, 0, this.gameCanvasWidth, this.gameCanvasHeight);
       this.ctx.fillStyle = '#EEE';
-      
+
       this.ctx.font = '30px serif';
       this.ctx.lineWidth = 2;
       this.ctx.fillText(
@@ -197,8 +220,8 @@ class Game {
         this.gameCanvasWidth / 2,
         this.gameCanvasHeight / 1.7
       );
-      
-      this.ctx.font = '15px serif'
+
+      this.ctx.font = '15px serif';
       this.ctx.fillText(
         'TAP TO PLAY AGAIN',
         this.gameCanvasWidth / 2,
