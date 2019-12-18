@@ -5,7 +5,8 @@ import { coordinates, modAngle, getDistanceAngle } from './utility.js';
 import { getColor } from './colors.js';
 
 export default class CircleObstacle {
-  constructor(game, radius, speed, direction) {
+  constructor(game, radius, speed, direction, posx) {
+    this.posx = posx;
     this.game = game;
     this.ctx = this.game.ctx;
     this.defaultSpeed = this.game.defaultSpeed;
@@ -19,7 +20,7 @@ export default class CircleObstacle {
     this.playerInfo = this.game.playerInfo;
 
     this.circle = new Obstacle(
-      this.game.gameCanvasWidth / 2,
+      posx,
       100 + this.obstacles.posY * this.obstacles.number,
       this.radius,
       Math.floor(4 * Math.random()),
