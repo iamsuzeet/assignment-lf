@@ -31,7 +31,7 @@ export default class ScoreStar {
           { x: this.playerInfo.posx, y: this.playerInfo.posy }
         ).distance < this.star.radius
       ) {
-        sound.scoreSound.play();
+        document.getElementById('score').play();
         this.game.score += this.star.score;
         this.star.destroy();
       }
