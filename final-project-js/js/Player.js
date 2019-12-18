@@ -11,7 +11,8 @@ export default class Player {
   init() {
     if (!this.game.gameOver) {
       if (this.game.clicked) {
-        sound.tapSound.play();
+        document.getElementById('tapSound').play();
+
         this.playerInfo.playerSpeed = this.playerInfo.maxPlayerSpeed;
 
         if (this.playerInfo.acceleration == 0) {
