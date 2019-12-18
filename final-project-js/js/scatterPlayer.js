@@ -1,7 +1,7 @@
 import Particle from './Particle.js';
 
 export default function scatterPlayer(game) {
-  sound.deadSound.play();
+  document.getElementById('dead').play();
   game.gameOver = true;
   repeatnewParticle(() => {
     new Particle(game);
