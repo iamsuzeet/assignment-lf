@@ -1,4 +1,3 @@
-import { sound } from './audio.js';
 import Obstacle from './Obstacle.js';
 
 import { getDistanceAngle, drawStar } from './utility.js';

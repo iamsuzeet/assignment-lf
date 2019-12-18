@@ -1,5 +1,3 @@
-import { sound } from './audio.js';
-
 import Obstacle from './Obstacle.js';
 import { getDistanceAngle, coordinates } from './utility.js';
 import { colors } from './colors.js';

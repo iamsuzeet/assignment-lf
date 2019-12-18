@@ -1,5 +1,3 @@
-import { sound } from './audio.js';
-
 import scatterPlayer from './scatterPlayer.js';
 import { drawCircle, coordinates } from './utility.js';
 

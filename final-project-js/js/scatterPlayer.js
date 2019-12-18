@@ -1,4 +1,3 @@
-import { sound } from './audio.js';
 import Particle from './Particle.js';
 
 export default function scatterPlayer(game) {
