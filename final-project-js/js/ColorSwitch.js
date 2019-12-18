@@ -1,6 +1,8 @@
+import { sound } from './audio.js';
+
 import Obstacle from './Obstacle.js';
 import { getDistanceAngle, coordinates } from './utility.js';
-import { colors, getColor, colorIndex } from './colors.js';
+import { colors } from './colors.js';
 
 export default class ColorSwitch {
   constructor(game) {
@@ -23,10 +25,6 @@ export default class ColorSwitch {
   }
 
   addColorSwitchProps() {
-    // this.colSwitch.move = () => {
-    //   this.colSwitch.destroy();
-    // };
-
     this.colSwitch.move = () => {
       // check collison between player and switch ball
       if (
@@ -38,12 +36,11 @@ export default class ColorSwitch {
       ) {
         var changeColor = colors[Math.floor(4 * Math.random())];
 
-        while (this.playerInfo.color ==changeColor) {
+        while (this.playerInfo.color == changeColor) {
           changeColor = colors[Math.floor(4 * Math.random())];
         }
-
+        sound.switchSound.play();
         this.playerInfo.color = changeColor;
-
         //destroy switch after collison from obstacle array
         this.colSwitch.destroy();
       }
