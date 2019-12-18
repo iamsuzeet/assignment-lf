@@ -1,6 +1,7 @@
 import Player from './Player.js';
 import CircleObstacle from './CircleObstacle.js';
 import ColorSwitch from './ColorSwitch.js';
+import ScoreStar from './ScoreStar.js';
 
 //helper functions
 import { coordinates, randomValue } from './utility.js';
@@ -24,6 +25,7 @@ class Game {
     //game variables
     this.counter = 0;
     this.score = 0;
+    this.bestScore = localStorage.getItem('best-score') || 0;
     this.clicked = false;
     this.gameOver = false;
     this.topY = 0;
@@ -89,6 +91,7 @@ class Game {
     new Player(this);
     this.updateObstacles();
     this.updateTopYCounter();
+    this.gameIsOver();
     this.clicked = false;
   }
 
@@ -97,10 +100,10 @@ class Game {
     this.ctx.fillStyle = '#222222';
     this.ctx.fillRect(0, 0, this.gameCanvasWidth, this.gameCanvasHeight);
     this.ctx.fillStyle = '#FFF';
-    this.ctx.font = '30px Arial';
+    this.ctx.font = '25px serif';
     this.ctx.textAlign = 'left';
     this.ctx.fillText(this.score, 10, 30);
-    this.ctx.font = '50px Arial';
+    this.ctx.font = '40px serif';
     this.ctx.textAlign = 'center';
     this.ctx.fillText(
       'TAP',
@@ -135,11 +138,13 @@ class Game {
 
       //player color switch
       new ColorSwitch(this);
+      //score star shape
+      new ScoreStar(this);
       this.defaultSpeed *= 1.04;
     }
   }
 
-  //rotate update obstacles
+  //update obstacles each obstacles in array
   updateObstacles() {
     for (var i in this.obstaclesArr) {
       this.obstaclesArr[i].update();
@@ -158,7 +163,53 @@ class Game {
 
   // game over
   gameIsOver() {
-    console.log('oops game over');
+    this.counter += this.counter1;
+    if (this.counter > 70) {
+      if (this.score > this.bestScore) {
+        localStorage.setItem('best-score', this.score);
+        this.bestScore = this.score;
+      }
+      this.ctx.globalAlpha = 1;
+      this.ctx.fillStyle = '#222';
+      this.ctx.fillRect(0, 0, this.gameCanvasWidth, this.gameCanvasHeight);
+      this.ctx.fillStyle = '#EEE';
+      
+      this.ctx.font = '30px serif';
+      this.ctx.lineWidth = 2;
+      this.ctx.fillText(
+        'SCORE',
+        this.gameCanvasWidth / 2,
+        this.gameCanvasHeight / 4
+      );
+      this.ctx.fillText(
+        this.score,
+        this.gameCanvasWidth / 2,
+        this.gameCanvasHeight / 3
+      );
+
+      this.ctx.fillText(
+        'BEST SCORE',
+        this.gameCanvasWidth / 2,
+        this.gameCanvasHeight / 2
+      );
+      this.ctx.fillText(
+        this.bestScore,
+        this.gameCanvasWidth / 2,
+        this.gameCanvasHeight / 1.7
+      );
+      
+      this.ctx.font = '15px serif'
+      this.ctx.fillText(
+        'TAP TO PLAY AGAIN',
+        this.gameCanvasWidth / 2,
+        this.gameCanvasHeight / 1.1
+      );
+      if (this.clicked) {
+        this.counter = 0;
+        this.counter1 = 0;
+        new Game().init();
+      }
+    }
   }
 }
 
