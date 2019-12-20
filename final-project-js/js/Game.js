@@ -14,6 +14,7 @@ class Game {
     this.body = document.querySelector('body');
     this.gameCanvas = document.createElement('canvas');
     this.ctx = this.gameCanvas.getContext('2d');
+    //game props
     this.gameCanvasWidth = 360;
     this.gameCanvasHeight = 512;
     this.window = {
@@ -57,6 +58,7 @@ class Game {
     this.gameCanvas.onclick = () => {
       this.clicked = true;
     };
+    //game loop begin here
     setInterval(this.gameloop.bind(this), 1000 / 60);
   }
 
@@ -127,7 +129,10 @@ class Game {
     ) {
       this.obstacles.number += 1;
 
-      switch (randomValue(2)) {
+      //random value parameter effects on probability of different obstacles
+      switch (randomValue(0,0,0,0,0,1,2,2,2,2,2)) {
+      // switch (randomValue(3)) {
+        //single circle obstacle
         case 0:
           new CircleObstacle(
             this,
@@ -137,42 +142,65 @@ class Game {
             this.gameCanvasWidth / 2
           );
           break;
+        //circle with inner circle
         case 1:
-          new CircleObstacle(this, 100, 2 / 3, 1, this.gameCanvasWidth / 2);
-          new CircleObstacle(this, 83, 1, -1, this.gameCanvasWidth / 2);
-          break;
-        case 2:
-          var a1 = new LeftCircle(
-            this,
-            70,
-            1,
-            1,
-            this.gameCanvasWidth - 105
-          );
-          new RightCircle(
+          let c2 = new RightCircle(this, 100, 1, 1, this.gameCanvasWidth / 2);
+          let c2Color = c2.circle.color;
+          new LeftCircle(
             this,
             70,
             1,
             -1,
-            this.gameCanvasWidth / 3.4,
-            a1.circle.color
+            this.gameCanvasWidth / 2,
+            c2Color,
+            true
           );
-      }
+          break;
+        //two circle side by side
+        case 2:
+          let c1 = new RightCircle(this, 70, 1, 1, this.gameCanvasWidth - 105);
+          let c1Color = c1.circle.color;
+          new LeftCircle(
+            this,
+            70,
+            1,
+            1,
+            this.gameCanvasWidth / 3.4,
+            c1Color,
+            false
+          );
+          break;
+        // 8 cirle shape not completed
+        // case 3:
+        //   new EightCircleShape(this);
+        //   break;
+        // case 3:
+        //   new LineObstacle(this,0,0,0,0);
+        //small circle that will make 8 shape not working yet
 
-      //player color switch
-      new ColorSwitch(this);
+        //two circle up and down not working yet
+        // case 3:
+        //   let c2 = new CircleObstacle(this, 65, 1, 1, this.gameCanvasWidth / 2);
+        //   //score star shape
+        //   new ScoreStar(this);
+        //   let c2posy = c2.circle.posy;
+
+        //   new UpperCircle(this, 65, 1, 1, this.gameCanvasWidth / 2, c2posy);
+      }
       //score star shape
       new ScoreStar(this);
+      //player color switch
+      new ColorSwitch(this);
       this.defaultSpeed *= 1.04;
     }
   }
 
   //update obstacles each obstacles in array
   updateObstacles() {
-    for (var i in this.obstaclesArr) {
+    for (let i in this.obstaclesArr) {
       this.obstaclesArr[i].update();
     }
-    for (var i = this.obstaclesArr.length - 1; i >= 0; i--) {
+    for (let i = this.obstaclesArr.length - 1; i >= 0; i--) {
       if (this.obstaclesArr[i].isDestroyed) {
         this.obstaclesArr.splice(i, 1);
       }
@@ -188,10 +216,13 @@ class Game {
   gameIsOver() {
     this.counter += this.counter1;
     if (this.counter > 70) {
+      //local storage persist
       if (this.score > this.bestScore) {
         localStorage.setItem('best-score', this.score);
         this.bestScore = this.score;
       }
+
+      //display local storage high score and player score
       this.ctx.globalAlpha = 1;
       this.ctx.fillStyle = '#222';
       this.ctx.fillRect(0, 0, this.gameCanvasWidth, this.gameCanvasHeight);
@@ -227,6 +258,8 @@ class Game {
         this.gameCanvasWidth / 2,
         this.gameCanvasHeight / 1.1
       );
+
+      //new game begin if clicked on canvas after game over
       if (this.clicked) {
         this.counter = 0;
         this.counter1 = 0;
