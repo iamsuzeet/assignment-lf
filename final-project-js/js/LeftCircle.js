@@ -5,16 +5,22 @@ import { coordinates, modAngle, getDistanceAngle } from './utility.js';
 import { getColor } from './colors.js';
 
 export default class LeftCircle {
-  constructor(game, radius, speed, direction, posx, color) {
+  constructor(game, radius, speed, direction, posx, c1Color, next) {
+    //game props
     this.posx = posx;
     this.game = game;
     this.ctx = this.game.ctx;
     this.defaultSpeed = this.game.defaultSpeed;
+
+    //obstacles props
     this.obstacles = this.game.obstacles;
     this.obstaclesArr = this.game.obstaclesArr;
+
+    //circle props
     this.radius = radius;
     this.speed = speed;
     this.direction = direction;
+    this.c1Color = c1Color;
 
     //player info
     this.playerInfo = this.game.playerInfo;
@@ -26,17 +32,53 @@ export default class LeftCircle {
       Math.floor(4 * Math.random()),
       this.game
     );
+    this.circle.color = this.c1Color;
 
+    //for matching same side color of both circle when rotating
+    if (next) {
+      switch (this.circle.color) {
+        case 0:
+          this.circle.color = 1;
+          break;
+        case 1:
+          this.circle.color = 2;
+          break;
+        case 2:
+          this.circle.color = 3;
+          break;
+        case 3:
+          this.circle.color = 0;
+          break;
+      }
+    } else {
+      switch (this.circle.color) {
+        case 0:
+          this.circle.color = 2;
+          break;
+        case 1:
+          this.circle.color = 3;
+          break;
+        case 2:
+          this.circle.color = 0;
+          break;
+        case 3:
+          this.circle.color = 1;
+          break;
+      }
+    }
+
+    // this.circle.color = this.checkColor;
     this.addCircleProps();
   }
 
   addCircleProps() {
     this.circle.angle = Math.PI * 2 * Math.floor(4 * Math.random());
     this.circle.speed = this.direction * this.speed;
+
     this.circle.width = (this.circle.radius * 15) / 100;
 
     this.circle.draw = () => {
-      var coord = coordinates(
+      let coord = coordinates(
         this.circle.posx,
         this.circle.posy,
         this.game.gameCanvasHeight,
@@ -45,24 +87,25 @@ export default class LeftCircle {
 
       this.ctx.lineWidth = this.circle.width;
 
-      for (var j = 0; j < 4; j++) {
+      for (let j = 0; j < 4; j++) {
         this.ctx.beginPath();
 
         this.ctx.strokeStyle = getColor(j + this.circle.color);
+
         /**
          * a = 0 , a2 = 90
          * a = 90, a2 = 180
          * a = 180 , a2 = 270
          * a = 270 , a2 = 360
          */
-        var a = modAngle(this.circle.angle + (Math.PI / 2) * j);
-        var a2 = modAngle(a + Math.PI / 2);
+        let a = modAngle(this.circle.angle + (Math.PI / 2) * j);
+        let a2 = modAngle(a + Math.PI / 2);
         if (
           getColor(j + this.circle.color) != this.playerInfo.color &&
           !this.game.gameOver
         ) {
           //get distance and angle from two coordinates
-          var dots = getDistanceAngle(
+          let dots = getDistanceAngle(
             coord,
             coordinates(
               this.playerInfo.posx,
@@ -79,8 +122,10 @@ export default class LeftCircle {
             dots.distance + this.playerInfo.radius >
               this.circle.radius - this.circle.width / 2
           ) {
-            var positiveAngle = modAngle(-dots.angle);
+            let positiveAngle = modAngle(-dots.angle);
+            //check collison between angle point
             if (positiveAngle > a && positiveAngle < a2) {
+               //destroy/scatter player circle
               scatterPlayer(this.game);
             }
           }
@@ -88,6 +133,7 @@ export default class LeftCircle {
         this.ctx.arc(coord.x, coord.y, this.circle.radius, a, a2);
         this.ctx.stroke();
       }
+      //for rotation of each arc
       this.circle.angle += (this.circle.speed * Math.PI) / 180;
     };
   }
