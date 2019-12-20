@@ -18,7 +18,7 @@ export function randomValue(...args) {
  */
 
 export function drawCircle(coords, radius, color, game) {
-  var ctx = game.ctx;
+  let ctx = game.ctx;
   ctx.beginPath();
   ctx.fillStyle = color;
   ctx.arc(coords.x, coords.y, radius, 0, 2 * Math.PI);
@@ -39,17 +39,17 @@ export function drawStar(
   outline,
   game
 ) {
-  var ctx = game.ctx;
-  var coord = coordinates(posx, posy, game.gameCanvasHeight, game.topY);
+  let ctx = game.ctx;
+  let coord = coordinates(posx, posy, game.gameCanvasHeight, game.topY);
   ctx.fillStyle = color;
   ctx.strokeStyle = color;
   ctx.lineWidth = 2;
   ctx.globalAlpha = alpha;
   ctx.beginPath();
-  for (var j = 0; j <= 5; j++) {
-    var angle1 = (j * Math.PI * 2) / 5 - Math.PI / 2 - angle;
-    var angle2 = angle1 + Math.PI / 5;
-    var radius2 = radius1 * 0.5;
+  for (let j = 0; j <= 5; j++) {
+    let angle1 = (j * Math.PI * 2) / 5 - Math.PI / 2 - angle;
+    let angle2 = angle1 + Math.PI / 5;
+    let radius2 = radius1 * 0.5;
     ctx.lineTo(
       coord.x + radius1 * Math.cos(angle1),
       coord.y + radius1 * Math.sin(angle1)
@@ -71,7 +71,7 @@ export function drawStar(
  */
 
 export function modAngle(x) {
-  var y = x;
+  let y = x;
   //for getting positive angle
   while (y < 0) {
     y += Math.PI * 2;
