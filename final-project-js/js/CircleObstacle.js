@@ -6,12 +6,15 @@ import { getColor } from './colors.js';
 
 export default class CircleObstacle {
   constructor(game, radius, speed, direction, posx) {
+    //game props
     this.posx = posx;
     this.game = game;
     this.ctx = this.game.ctx;
     this.defaultSpeed = this.game.defaultSpeed;
+    //obstacles
     this.obstacles = this.game.obstacles;
     this.obstaclesArr = this.game.obstaclesArr;
+    //circle props
     this.radius = radius;
     this.speed = speed;
     this.direction = direction;
@@ -26,7 +29,7 @@ export default class CircleObstacle {
       Math.floor(4 * Math.random()),
       this.game
     );
-
+    //add additional properties to circle
     this.addCircleProps();
   }
 
@@ -79,7 +82,9 @@ export default class CircleObstacle {
               this.circle.radius - this.circle.width / 2
           ) {
             var positiveAngle = modAngle(-dots.angle);
+            //check collison between angle point
             if (positiveAngle > a && positiveAngle < a2) {
+              //destroy/scatter player circle
               scatterPlayer(this.game);
             }
           }
@@ -87,6 +92,7 @@ export default class CircleObstacle {
         this.ctx.arc(coord.x, coord.y, this.circle.radius, a, a2);
         this.ctx.stroke();
       }
+      //for rotation of each arc
       this.circle.angle += (this.circle.speed * Math.PI) / 180;
     };
   }
