@@ -11,7 +11,7 @@ export default function scatterPlayer(game) {
 
 //implenting callback
 function repeatnewParticle(cb, repeat) {
-  for (var i = 0; i < repeat; i++) {
+  for (let i = 0; i < repeat; i++) {
     cb();
   }
 }
