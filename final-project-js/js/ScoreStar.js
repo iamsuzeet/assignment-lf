@@ -35,6 +35,7 @@ export default class ScoreStar {
         this.game.score += this.star.score;
         this.star.destroy();
       }
+      //for blinking of star
       this.star.radius =
         this.star.radius1 +
         1.2 * Math.sin((this.star.angle++ / 180) * Math.PI * 4);
