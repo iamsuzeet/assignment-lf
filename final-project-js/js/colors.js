@@ -2,7 +2,7 @@
  * files for changing color and color utilities
  */
 
-export var colors = ['#FF3399', '#33FFFF', '#FFFF33', '#AA00FF'];
+export const colors = ['#FF3399', '#33FFFF', '#FFFF33', '#AA00FF'];
 
 //return random color
 export function randomColor() {
@@ -11,8 +11,9 @@ export function randomColor() {
 
 //return color when given index
 export function getColor(index) {
-  var n = index;
+  let n = index;
   return colors[n % 4];
 }
 
-export var colorIndex = Math.floor(4 * Math.random());
+//return random color index
+export let colorIndex = Math.floor(4 * Math.random());
