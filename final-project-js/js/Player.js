@@ -31,7 +31,8 @@ export default class Player {
         this.playerInfo.posy1
       );
 
-      if (this.playerInfo.posy < this.game.topY) {
+      if (this.playerInfo.posy < this.game.topY - 3) {
+        //scatter/ destory player circle when touched bottom of canvas
         scatterPlayer(this.game);
       }
 
