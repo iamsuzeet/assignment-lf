@@ -4,6 +4,7 @@ import { colors } from './colors.js';
 
 export default class ColorSwitch {
   constructor(game) {
+    //game props
     this.game = game;
     this.ctx = this.game.ctx;
     this.playerInfo = this.game.playerInfo;
@@ -32,7 +33,7 @@ export default class ColorSwitch {
         ).distance <
         this.playerInfo.radius + this.colSwitch.radius
       ) {
-        var changeColor = colors[Math.floor(4 * Math.random())];
+        let changeColor = colors[Math.floor(4 * Math.random())];
 
         while (this.playerInfo.color == changeColor) {
           changeColor = colors[Math.floor(4 * Math.random())];
@@ -45,15 +46,15 @@ export default class ColorSwitch {
     };
     // draw switch on canvas
     this.colSwitch.draw = () => {
-      var coord = coordinates(
+      let coord = coordinates(
         this.colSwitch.posx,
         this.colSwitch.posy,
         this.game.gameCanvasHeight,
         this.game.topY
       );
 
-      for (var i = 0; i < 4; i++) {
-        var a = (i * Math.PI) / 2;
+      for (let i = 0; i < 4; i++) {
+        let a = (i * Math.PI) / 2;
         this.ctx.fillStyle = colors[i];
         this.ctx.beginPath();
         this.ctx.lineTo(coord.x, coord.y);
