@@ -33,11 +33,10 @@ export default class Obstacle {
         this.newObstacle.isDestroyed = true;
       },
       update: () => {
-        //move obstacles
-        this.newObstacle.move();
-
-        //draw obstacles;
+        //draw circle obstacles;
         this.newObstacle.draw();
+        //move circle obstacles
+        this.newObstacle.move();
 
         if (this.newObstacle.posy + 100 < this.topY) {
           this.newObstacle.destroy();
