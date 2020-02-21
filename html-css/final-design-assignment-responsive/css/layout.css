@@ -307,8 +307,8 @@ a.slider {
 /* why choose youniverse start here */
 .why-choose-wrapper {
     margin-top: 100px;
-
-    /* padding-bottom: 110px */
+    max-height: 400px;
+   padding-bottom: 110px;
 }
 
 .why-choose-content-left {
